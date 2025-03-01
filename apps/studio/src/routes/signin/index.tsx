@@ -65,7 +65,6 @@ const SignIn = observer(() => {
                             </Button>
                         </div>
                         <div className="h-3"></div>
-
                         <div className="items-center w-full ">
                             <Button
                                 variant="outline"
@@ -74,6 +73,17 @@ const SignIn = observer(() => {
                             >
                                 <Icons.DiscordLogo className="w-4 h-4 mr-2" />{' '}
                                 {'Continue with Discord'}
+                            </Button>
+                        </div>
+                        <div className="h-3"></div>
+                        <div className="items-center w-full ">
+                            <Button
+                                variant="outline"
+                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 rounded-full`}
+                                onClick={() => handleLogin(SignInMethod.GITHUB)}
+                            >
+                                <Icons.GitHubLogo className="w-4 h-4 mr-2" />{' '}
+                                {'Continue with Github'}
                             </Button>
                         </div>
                     </div>
