@@ -46,5 +46,8 @@
     "devDependencies": {
         "extract-zip": "^2.0.1",
         "husky": "^9.1.6"
+    },
+    "dependencies": {
+        "openai": "^4.86.1"
     }
 }

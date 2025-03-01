@@ -39,7 +39,7 @@ export class AuthManager {
         });
     }
 
-    async signIn(provider: 'github' | 'google') {
+    async signIn(provider: 'github' | 'google' | 'discord') {
         await invokeMainChannel(MainChannels.SIGN_IN, { provider });
     }
 

@@ -17,6 +17,7 @@ export const colors = {
         30: '#0000004d',
         60: '#00000099',
         85: '#000000d9',
+        90: '#002C2C2C',
     },
     purple: {
         DEFAULT: '#C174FF',

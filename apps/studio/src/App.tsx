@@ -11,7 +11,7 @@ import '@fontsource-variable/inter';
 function App() {
     return (
         <I18nextProvider i18n={i18n}>
-            <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+            <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
                 <TooltipProvider>
                     <AppBar />
                     <Routes />
