@@ -19,6 +19,8 @@ import { cn } from '@onlook/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useRef, useState } from 'react';
 
+import arcoSMImg from '@/assets/arco.png';
+
 const ProjectBreadcrumb = observer(() => {
     const editorEngine = useEditorEngine();
     const projectsManager = useProjectsManager();
@@ -80,7 +82,8 @@ const ProjectBreadcrumb = observer(() => {
                         variant={'ghost'}
                         className="mx-0 px-0 gap-2 text-foreground-onlook text-small hover:text-foreground-active hover:bg-transparent"
                     >
-                        <Icons.OnlookLogo className="w-6 h-6 hidden md:block" />
+                        {/* <Icons.OnlookLogo className="w-6 h-6 hidden md:block" /> */}
+                        <img src={arcoSMImg} className="w-6 h-6 hidden md:block" alt="Arco Logo" />
                         <span className="mx-0 max-w-[60px] md:max-w-[100px] lg:max-w-[200px] px-0 text-foreground-onlook text-small truncate cursor-pointer">
                             {projectsManager.project?.name}
                         </span>
@@ -141,20 +144,20 @@ const ProjectBreadcrumb = observer(() => {
                     <DropdownMenuItem onClick={handleOpenProjectFolder}>
                         {'Show in Explorer'}
                     </DropdownMenuItem>
-                    <DropdownMenuItem
+                    {/* <DropdownMenuItem
                         onClick={() => {
                             editorEngine.isPlansOpen = true;
                         }}
                     >
                         Subscriptions
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
+                    </DropdownMenuItem> */}
+                    {/* <DropdownMenuItem
                         onClick={() => {
                             editorEngine.isSettingsOpen = true;
                         }}
                     >
                         Settings
-                    </DropdownMenuItem>
+                    </DropdownMenuItem> */}
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>

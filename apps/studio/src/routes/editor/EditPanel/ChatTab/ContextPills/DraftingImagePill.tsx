@@ -34,19 +34,19 @@ export const DraftImagePill = React.forwardRef<
             ref={ref}
         >
             {/* Left side: Image thumbnail */}
-            <div className="w-7 h-7 flex items-center justify-center overflow-hidden relative">
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden relative">
                 <img
                     src={context.content}
                     alt={context.displayName}
-                    className="w-full h-full object-cover rounded-l-md"
+                    className="w-full h-full object-cover rounded-md"
                 />
-                <div className="absolute inset-0 border-l-[1px] border-y-[1px] rounded-l-md border-white/10 pointer-events-none" />
+                <div className="absolute inset-0 border-l-[1px] border-y-[1px] rounded-md border-white/10 pointer-events-none" />
             </div>
 
             {/* Right side: Filename */}
-            <span className="text-xs overflow-hidden whitespace-nowrap text-ellipsis max-w-[100px] pr-1">
+            {/* <span className="text-xs overflow-hidden whitespace-nowrap text-ellipsis max-w-[100px] pr-1">
                 {getTruncatedName(context)}
-            </span>
+            </span> */}
 
             {/* Hover X button */}
             <button
@@ -55,9 +55,9 @@ export const DraftImagePill = React.forwardRef<
                     e.stopPropagation();
                     onRemove();
                 }}
-                className="absolute -top-1.5 -right-1.5 w-6 h-6 p-1 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                className="absolute -top-4 -right-2 w-4 h-4 p-1 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
             >
-                <Icons.CrossL className="w-2.5 h-2.5 text-primary-foreground" />
+                <Icons.CrossL className="w-3 h-3 text-primary-foreground" color="black" />
             </button>
         </motion.span>
     );

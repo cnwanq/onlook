@@ -24,11 +24,11 @@ export default function EditAppButton({ project, ...props }: EditAppButtonProps)
         <ButtonMotion
             size="default"
             variant={'outline'}
-            className="gap-2 bg-background-active border-[0.5px] border-border-active w-full lg:w-auto"
+            className="gap-2 bg-background-active border-[0.5px] border-border-active w-full lg:w-auto bg-black text-white rounded-full text-sm"
             onClick={() => selectProject(project)}
             {...props}
         >
-            <Icons.PencilPaper />
+            <Icons.Pencil />
             <p> Edit App </p>
         </ButtonMotion>
     );

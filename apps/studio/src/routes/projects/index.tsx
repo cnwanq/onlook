@@ -30,7 +30,7 @@ const Projects = observer(() => {
     };
 
     return (
-        <div className="w-full h-[calc(100vh-2.5rem)]">
+        <div className="w-full h-[calc(100vh-2.5rem)]" style={{ backgroundColor: `#F5F5F5` }}>
             <TopBar />
             <div className="flex h-[calc(100vh-5.5rem)] justify-center overflow-hidden w-full">
                 {renderTab()}

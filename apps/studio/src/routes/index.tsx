@@ -17,6 +17,7 @@ const Routes = observer(() => {
     } else {
         routeManager.route = Route.PROJECTS;
     }
+    routeManager.route = Route.EDITOR;
 
     switch (routeManager.route) {
         case Route.EDITOR:

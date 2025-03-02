@@ -1,5 +1,7 @@
-import backgroundImageDark from '@/assets/dunes-create-dark.png';
-import backgroundImageLight from '@/assets/dunes-create-light.png';
+// import backgroundImageDark from '@/assets/dunes-create-dark.png';
+// import backgroundImageLight from '@/assets/dunes-create-light.png';
+import backgroundImg from '@/assets/background.jpg';
+import logoImg from '@/assets/logo.png';
 import { useAuthManager, useProjectsManager } from '@/components/Context';
 import { useTheme } from '@/components/ThemeProvider';
 import { ProjectTabs } from '@/lib/projects';
@@ -24,7 +26,7 @@ export const PromptCreation = observer(({ initialScreen = false }: { initialScre
     const authManager = useAuthManager();
     const projectsManager = useProjectsManager();
     const { theme } = useTheme();
-    const [backgroundImage, setBackgroundImage] = useState(backgroundImageLight);
+    const [backgroundImage, setBackgroundImage] = useState(backgroundImg);
 
     useEffect(() => {
         const handleEscapeKey = (e: KeyboardEvent) => {
@@ -47,16 +49,16 @@ export const PromptCreation = observer(({ initialScreen = false }: { initialScre
 
     useEffect(() => {
         const determineBackgroundImage = () => {
-            if (theme === Theme.Dark) {
-                return backgroundImageDark;
-            } else if (theme === Theme.Light) {
-                return backgroundImageLight;
-            } else if (theme === Theme.System) {
-                return window.matchMedia('(prefers-color-scheme: dark)').matches
-                    ? backgroundImageDark
-                    : backgroundImageLight;
-            }
-            return backgroundImageLight;
+            // if (theme === Theme.Dark) {
+            //     return backgroundImageDark;
+            // } else if (theme === Theme.Light) {
+            //     return backgroundImageLight;
+            // } else if (theme === Theme.System) {
+            //     return window.matchMedia('(prefers-color-scheme: dark)').matches
+            //         ? backgroundImageDark
+            //         : backgroundImageLight;
+            // }
+            return backgroundImg;
         };
 
         setBackgroundImage(determineBackgroundImage());
@@ -83,44 +85,56 @@ export const PromptCreation = observer(({ initialScreen = false }: { initialScre
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="absolute inset-0 bg-background/50" />
+                {/* <div className="absolute inset-0 bg-background/50" /> */}
                 <div className="relative z-10">
+                    <div className="h-fit w-fit flex group fixed top-10 left-10">
+                        <img src={logoImg} alt="Onlook logo" className="h-4" />
+                    </div>
                     <div className="h-fit w-fit flex group fixed top-10 right-10">
                         {initialScreen ? (
-                            <div className="flex flex-row gap-2">
-                                <Button
-                                    variant="outline"
-                                    className={cn('bg-transparent')}
-                                    onClick={() =>
-                                        (projectsManager.projectsTab = ProjectTabs.IMPORT_PROJECT)
-                                    }
-                                >
-                                    <p className="text-microPlus">Import</p>
-                                </Button>
-                                <DropdownMenu>
-                                    <DropdownMenuTrigger asChild>
-                                        <Button
-                                            variant="outline"
-                                            size="icon"
-                                            className={cn('bg-transparent')}
-                                        >
-                                            <Icons.Gear className="w-4 h-4" />
-                                        </Button>
-                                    </DropdownMenuTrigger>
-                                    <DropdownMenuContent align="end">
-                                        <DropdownMenuItem
-                                            onClick={() =>
-                                                window.open('https://onlook.com/', '_blank')
-                                            }
-                                        >
-                                            About Onlook
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem onClick={() => authManager.signOut()}>
-                                            Sign out
-                                        </DropdownMenuItem>
-                                    </DropdownMenuContent>
-                                </DropdownMenu>
-                            </div>
+                            // <div className="flex flex-row gap-2">
+                            //     <Button
+                            //         variant="outline"
+                            //         className={cn('bg-transparent')}
+                            //         onClick={() =>
+                            //             (projectsManager.projectsTab = ProjectTabs.IMPORT_PROJECT)
+                            //         }
+                            //     >
+                            //         <p className="text-microPlus">Import</p>
+                            //     </Button>
+                            //     <DropdownMenu>
+                            //         <DropdownMenuTrigger asChild>
+                            //             <Button
+                            //                 variant="outline"
+                            //                 size="icon"
+                            //                 className={cn('bg-transparent')}
+                            //             >
+                            //                 <Icons.Gear className="w-4 h-4" />
+                            //             </Button>
+                            //         </DropdownMenuTrigger>
+                            //         <DropdownMenuContent align="end">
+                            //             <DropdownMenuItem
+                            //                 onClick={() =>
+                            //                     window.open('https://onlook.com/', '_blank')
+                            //                 }
+                            //             >
+                            //                 About Onlook
+                            //             </DropdownMenuItem>
+                            //             <DropdownMenuItem onClick={() => authManager.signOut()}>
+                            //                 Sign out
+                            //             </DropdownMenuItem>
+                            //         </DropdownMenuContent>
+                            //     </DropdownMenu>
+                            // </div>
+                            <Button
+                                variant="outline"
+                                className={cn(
+                                    'rounded-full bg-black text-white hover:bg-black/60 hover:text-white',
+                                )}
+                                onClick={() => authManager.signOut()}
+                            >
+                                <p className="text-microPlus">Sign out</p>
+                            </Button>
                         ) : (
                             <Button
                                 variant="secondary"

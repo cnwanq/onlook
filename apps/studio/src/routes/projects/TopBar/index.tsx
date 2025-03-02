@@ -11,6 +11,7 @@ import {
 import { Icons } from '@onlook/ui/icons';
 import { cn } from '@onlook/ui/utils';
 import { observer } from 'mobx-react-lite';
+import logoImg from '@/assets/logo.png';
 
 export const TopBar = observer(() => {
     const editorEngine = useEditorEngine();
@@ -32,13 +33,14 @@ export const TopBar = observer(() => {
     return (
         <div className="flex flex-row h-12 px-12 items-center">
             <div className="flex-1 flex items-center justify-start mt-3">
-                <Icons.OnlookTextLogo className="w-24" viewBox="0 0 139 17" />
+                {/* <Icons.OnlookTextLogo className="w-24" viewBox="0 0 139 17" /> */}
+                <img src={logoImg} alt="Onlook logo" className="h-4" />
             </div>
             <div className="flex-1 flex justify-end space-x-2 mt-4 items-center">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button
-                            className="text-sm text-foreground-onlook focus:outline-none"
+                            className="text-sm text-foreground-onlook focus:outline-none bg-white rounded-full"
                             variant="ghost"
                         >
                             <Icons.Plus className="w-5 h-5 mr-2" />

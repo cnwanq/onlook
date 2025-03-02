@@ -28,7 +28,7 @@ export const CreateLoadingCard = observer(() => {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-2xl text-foreground-primary"
                         >
-                            Setting up your new Onlook app...
+                            Setting up your new project...
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}

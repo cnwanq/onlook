@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import EditAppButton from './EditAppButton';
 import ProjectSettingsButton from './ProjectSettingsButton';
 import { timeSince } from '/common/helpers';
+import { Button } from '@onlook/ui/button';
 
 const ProjectInfo = observer(({ project, direction }: { project: Project; direction: number }) => {
     const variants = {
@@ -36,13 +37,21 @@ const ProjectInfo = observer(({ project, direction }: { project: Project; direct
                         className="inline-block text-foreground-active text-title1"
                     >
                         {project.name}
+                        <div className="text-foreground-onlook flex text-small">
+                            <p>{project.folderPath}</p>
+                        </div>
                     </motion.p>
                 </AnimatePresence>
-                <div className="text-foreground-onlook flex flex-col md:flex-row gap-2 md:gap-7 text-small">
+                {/* <div className="text-foreground-onlook flex flex-col md:flex-row gap-2 md:gap-7 text-small">
                     <p>Last edited {timeSince(new Date(project.updatedAt))} ago </p>
                     <p>{project.url}</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full">
+                </div> */}
+
+                {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full">
+                    <EditAppButton project={project} />
+                    <ProjectSettingsButton project={project} />
+                </div> */}
+                <div className="flex flex-row">
                     <EditAppButton project={project} />
                     <ProjectSettingsButton project={project} />
                 </div>

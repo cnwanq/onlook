@@ -28,7 +28,7 @@ export const CreateErrorCard = observer(() => {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-2xl text-foreground-primary"
                         >
-                            Error creating your Onlook app
+                            Error creating your app project
                         </motion.h2>
                     </CardHeader>
                     <CardContent>

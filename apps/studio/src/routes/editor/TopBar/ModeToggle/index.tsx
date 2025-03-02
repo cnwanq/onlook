@@ -71,7 +71,7 @@ const ModeToggle = observer(() => {
                 ))}
             </ToggleGroup>
             <motion.div
-                className="absolute -top-1 h-0.5 bg-foreground"
+                className="absolute top-1 h-7 bg-white rounded-full -z-10"
                 initial={false}
                 animate={{
                     width: '50%',

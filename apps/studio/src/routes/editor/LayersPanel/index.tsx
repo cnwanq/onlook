@@ -85,10 +85,10 @@ const LayersPanel = observer(() => {
             onMouseLeave={handleMouseLeave}
         >
             {/* Left sidebar with tabs */}
-            <div className="w-20 bg-background-onlook/60 backdrop-blur-sm flex flex-col items-center py-0.5 gap-2">
+            <div className="w-16 bg-background-onlook/60 backdrop-blur-sm flex flex-col items-center py-0.5 gap-2">
                 <button
                     className={cn(
-                        'w-16 h-16 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-12 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.LAYERS && isLocked
                             ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
@@ -97,12 +97,12 @@ const LayersPanel = observer(() => {
                     onMouseEnter={() => handleMouseEnter(TabValue.LAYERS)}
                 >
                     <Icons.Layers className="w-5 h-5" />
-                    <span className="text-xs leading-tight">Layers</span>
+                    {/* <span className="text-xs leading-tight">Layers</span> */}
                 </button>
 
                 <button
                     className={cn(
-                        'w-16 h-16 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-12 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.PAGES && isLocked
                             ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
@@ -111,12 +111,12 @@ const LayersPanel = observer(() => {
                     onMouseEnter={() => handleMouseEnter(TabValue.PAGES)}
                 >
                     <Icons.File className="w-5 h-5" />
-                    <span className="text-xs leading-tight">Pages</span>
+                    {/* <span className="text-xs leading-tight">Pages</span> */}
                 </button>
 
                 <button
                     className={cn(
-                        'w-16 h-16 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-12 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.IMAGES && isLocked
                             ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
@@ -125,12 +125,12 @@ const LayersPanel = observer(() => {
                     onMouseEnter={() => handleMouseEnter(TabValue.IMAGES)}
                 >
                     <Icons.Image className="w-5 h-5" />
-                    <span className="text-xs leading-tight">Images</span>
+                    {/* <span className="text-xs leading-tight">Images</span> */}
                 </button>
 
-                <button
+                {/* <button
                     className={cn(
-                        'w-16 h-16 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-16 h-16 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2 hidden',
                         selectedTab === TabValue.WINDOWS && isLocked
                             ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
@@ -168,12 +168,12 @@ const LayersPanel = observer(() => {
                 >
                     <Icons.Component className="w-5 h-5" />
                     <span className="text-xs leading-tight">Elements</span>
-                </button>
+                </button> */}
 
                 <div className="mt-auto flex flex-col gap-0 items-center mb-4">
-                    <OpenCodeMini />
+                    {/* <OpenCodeMini /> */}
                     <ZoomControls />
-                    <HelpDropdown />
+                    {/* <HelpDropdown /> */}
                 </div>
             </div>
 

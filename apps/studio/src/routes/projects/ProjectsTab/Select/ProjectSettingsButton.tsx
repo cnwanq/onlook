@@ -25,6 +25,8 @@ import { Label } from '@onlook/ui/label';
 import { cn } from '@onlook/ui/utils';
 import { useEffect, useMemo, useState } from 'react';
 
+import DeleteImg from '@/assets/icon-delete.png';
+
 export default function ProjectSettingsButton({ project }: { project: Project }) {
     const projectsManager = useProjectsManager();
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
@@ -56,7 +58,15 @@ export default function ProjectSettingsButton({ project }: { project: Project })
 
     return (
         <>
-            <DropdownMenu>
+            <div className="w-2"></div>
+            <Button
+                variant="outline"
+                className="bg-black rounded-full text-sm p-0 w-9 h-9 "
+                onClick={() => handleDeleteProject}
+            >
+                <img src={DeleteImg} className="w-3 h-3" />
+            </Button>
+            {/* <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button size="default" variant="ghost" className="gap-2 w-full lg:w-auto">
                         <Icons.DotsVertical />
@@ -165,7 +175,7 @@ export default function ProjectSettingsButton({ project }: { project: Project })
                         </Button>
                     </AlertDialogFooter>
                 </AlertDialogContent>
-            </AlertDialog>
+            </AlertDialog> */}
         </>
     );
 }

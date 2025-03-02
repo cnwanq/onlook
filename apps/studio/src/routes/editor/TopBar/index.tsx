@@ -88,7 +88,7 @@ const EditorTopBar = observer(() => {
                                         <Button
                                             variant="ghost"
                                             size="icon"
-                                            className="h-8"
+                                            className="h-8 bg-white rounded-full m-1"
                                             onClick={click}
                                             disabled={isDisabled}
                                         >
@@ -103,6 +103,7 @@ const EditorTopBar = observer(() => {
                         ))}
                     </motion.div>
                 </div>
+                <span className="text-neutral-400">|</span>
                 <Publish />
             </div>
         </div>

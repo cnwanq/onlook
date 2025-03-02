@@ -11,13 +11,13 @@ const MotionCard = React.forwardRef<HTMLDivElement, MotionDivProps>(
             ref={ref}
             className={cn('relative', className)}
             style={{
-                borderRadius: '12px',
-                backdropFilter: 'blur(12px)',
-                backgroundColor: 'hsl(var(--background) /0.6)',
-                boxShadow: `
-                    0px 0px 0px 0.5px hsl(var(--foreground) /0.2)
-                `,
-                color: 'var(--card-foreground)',
+                // borderRadius: '12px',
+                // backdropFilter: 'blur(12px)',
+                // backgroundColor: 'hsl(var(--background) /0.6)',
+                // boxShadow: `
+                //     0px 0px 0px 0.5px hsl(var(--foreground) /0.2)
+                // `,
+                // color: 'var(--card-foreground)',
                 ...style,
             }}
             {...props}

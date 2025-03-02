@@ -184,33 +184,31 @@ export const PromptingCard = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ height: diffHeight, opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
-                    className={cn(
-                        'w-[600px] backdrop-blur-md bg-background/30 overflow-hidden',
-                        isDragging && 'bg-background',
-                    )}
+                    className={cn('w-[680px] overflow-hidden', isDragging && 'bg-background')}
                 >
                     <motion.div ref={diffRef} layout="position" className="flex flex-col">
                         <CardHeader>
                             <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="text-2xl text-foreground-primary"
+                                className="text-4xl text-foreground-primary text-center"
                             >
-                                What kind of website do you want to make?
+                                All-in-One Website Creation Platform
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-sm text-foreground-secondary"
+                                className="text-sm text-foreground-secondary text-center text-stone-500"
                             >
-                                Tell us a bit about your project. Be as detailed as possible.
+                                From design to launch, we provide comprehensive support to get your
+                                website online effortlessly.
                             </motion.p>
                         </CardHeader>
                         <CardContent>
                             <div
                                 className={cn(
-                                    'flex flex-col gap-3 rounded p-0 transition-colors duration-200 cursor-text',
+                                    'flex flex-col gap-3 rounded-2xl p-0 transition-colors duration-200 cursor-text',
                                     'backdrop-blur-sm bg-background-secondary/80',
                                     '[&[data-dragging-image=true]]:bg-teal-500/40',
                                     isDragging && 'bg-teal-500/40 cursor-copy',
@@ -221,12 +219,12 @@ export const PromptingCard = () => {
                                 onDrop={handleDrop}
                             >
                                 <div
-                                    className={`flex flex-col w-full ${selectedImages.length > 0 ? 'p-4' : 'px-4 pt-1'}`}
+                                    className={`flex flex-col w-full ${selectedImages.length > 0 ? 'p-4 pt-6' : 'px-4 pt-1'}`}
                                 >
                                     <div
                                         className={cn(
                                             'flex flex-row flex-wrap w-full gap-1.5 text-micro text-foreground-secondary',
-                                            selectedImages.length > 0 ? 'min-h-6' : 'h-0',
+                                            selectedImages.length > 0 ? 'min-h-10' : 'h-0',
                                         )}
                                     >
                                         <AnimatePresence mode="popLayout">
@@ -242,13 +240,13 @@ export const PromptingCard = () => {
                                     <Textarea
                                         ref={textareaRef}
                                         className={cn(
-                                            'mt-2 overflow-auto min-h-[60px] text-small p-0 border-0 shadow-none rounded-none caret-[#FA003C]',
-                                            'selection:bg-[#FA003C]/30 selection:text-[#FA003C] text-foreground-primary',
+                                            'mt-2 overflow-auto min-h-[60px] text-small p-0 border-0 shadow-none rounded-none caret-[#3C3C3C]',
+                                            'selection:bg-[#3C3C3C]/30 selection:text-[#3C3C3C] text-foreground-primary',
                                             'placeholder:text-foreground-primary/50',
                                             'cursor-text',
                                             'transition-[height] duration-300 ease-in-out',
                                         )}
-                                        placeholder="Paste a reference screenshot, write a novel, get creative..."
+                                        placeholder="Please tell us as much as you can about your project..."
                                         value={inputValue}
                                         onChange={(e) => {
                                             setInputValue(e.target.value);
@@ -349,7 +347,7 @@ export const PromptingCard = () => {
                                                 size="icon"
                                                 variant="secondary"
                                                 className={cn(
-                                                    'text-smallPlus w-fit h-full py-2 px-2',
+                                                    'text-smallPlus w-fit h-full py-2 px-2 rounded-full',
                                                     isInputInvalid
                                                         ? 'text-primary'
                                                         : 'bg-foreground-primary text-white hover:bg-foreground-hover',
@@ -357,7 +355,7 @@ export const PromptingCard = () => {
                                                 disabled={isInputInvalid}
                                                 onClick={handleSubmit}
                                             >
-                                                <Icons.ArrowRight
+                                                <Icons.ArrowUp
                                                     className={cn(
                                                         'w-5 h-5',
                                                         !isInputInvalid
