@@ -88,43 +88,52 @@ const LayersPanel = observer(() => {
             <div className="w-16 bg-background-onlook/60 backdrop-blur-sm flex flex-col items-center py-0.5 gap-2">
                 <button
                     className={cn(
-                        'w-12 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-10 h-10 rounded-full flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.LAYERS && isLocked
-                            ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
+                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
                     )}
                     onClick={() => handleClick(TabValue.LAYERS)}
                     onMouseEnter={() => handleMouseEnter(TabValue.LAYERS)}
                 >
-                    <Icons.Layers className="w-5 h-5" />
+                    <Icons.Layers
+                        className="w-5 h-5"
+                        color={cn(selectedTab === TabValue.LAYERS && isLocked ? 'white' : 'black')}
+                    />
                     {/* <span className="text-xs leading-tight">Layers</span> */}
                 </button>
 
                 <button
                     className={cn(
-                        'w-12 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-10 h-10 rounded-full flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.PAGES && isLocked
-                            ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
+                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
                     )}
                     onClick={() => handleClick(TabValue.PAGES)}
                     onMouseEnter={() => handleMouseEnter(TabValue.PAGES)}
                 >
-                    <Icons.File className="w-5 h-5" />
+                    <Icons.File
+                        className="w-5 h-5"
+                        color={cn(selectedTab === TabValue.PAGES && isLocked ? 'white' : 'black')}
+                    />
                     {/* <span className="text-xs leading-tight">Pages</span> */}
                 </button>
 
                 <button
                     className={cn(
-                        'w-12 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',
+                        'w-10 h-10 rounded-full flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.IMAGES && isLocked
-                            ? 'bg-accent text-foreground border-[0.5px] border-foreground/20'
+                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20'
                             : 'text-muted-foreground hover:text-foreground',
                     )}
                     onClick={() => handleClick(TabValue.IMAGES)}
                     onMouseEnter={() => handleMouseEnter(TabValue.IMAGES)}
                 >
-                    <Icons.Image className="w-5 h-5" />
+                    <Icons.Image
+                        className="w-5 h-5"
+                        color={cn(selectedTab === TabValue.IMAGES && isLocked ? 'white' : 'black')}
+                    />
                     {/* <span className="text-xs leading-tight">Images</span> */}
                 </button>
 

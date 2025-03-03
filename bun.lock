@@ -5,6 +5,7 @@
       "name": "@onlook/repo",
       "dependencies": {
         "openai": "^4.86.1",
+        "react-icons": "^5.5.0",
       },
       "devDependencies": {
         "extract-zip": "^2.0.1",
@@ -2367,6 +2368,8 @@
     "react-hotkeys-hook": ["react-hotkeys-hook@4.6.1", "", { "peerDependencies": { "react": ">=16.8.1", "react-dom": ">=16.8.1" } }, "sha512-XlZpbKUj9tkfgPgT9gA+1p7Ey6vFIZHttUjPqpTdyT5nqQ8mHL7elxvSbaC+dpSiHUSmr21Ya1mDxBZG3aje4Q=="],
 
     "react-i18next": ["react-i18next@15.4.1", "", { "dependencies": { "@babel/runtime": "^7.25.0", "html-parse-stringify": "^3.0.1" }, "peerDependencies": { "i18next": ">= 23.2.3", "react": ">= 16.8.0" } }, "sha512-ahGab+IaSgZmNPYXdV1n+OYky95TGpFwnKRflX/16dY04DsYYKHtVLjeny7sBSCREEcoMbAgSkFiGLF5g5Oofw=="],
+
+    "react-icons": ["react-icons@5.5.0", "", { "peerDependencies": { "react": "*" } }, "sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw=="],
 
     "react-is": ["react-is@16.13.1", "", {}, "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="],
 

@@ -25,7 +25,8 @@ import { Label } from '@onlook/ui/label';
 import { cn } from '@onlook/ui/utils';
 import { useEffect, useMemo, useState } from 'react';
 
-import DeleteImg from '@/assets/icon-delete.png';
+// import DeleteImg from '@/assets/icon-delete.png';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 export default function ProjectSettingsButton({ project }: { project: Project }) {
     const projectsManager = useProjectsManager();
@@ -61,10 +62,10 @@ export default function ProjectSettingsButton({ project }: { project: Project })
             <div className="w-2"></div>
             <Button
                 variant="outline"
-                className="bg-black rounded-full text-sm p-0 w-9 h-9 "
+                className="bg-black rounded-full text-sm p-0 w-9 h-9 hover:text-black text-white"
                 onClick={() => handleDeleteProject}
             >
-                <img src={DeleteImg} className="w-3 h-3" />
+                <RiDeleteBin5Line className="w-4 h-4" />
             </Button>
             {/* <DropdownMenu>
                 <DropdownMenuTrigger asChild>

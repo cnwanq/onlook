@@ -219,7 +219,8 @@ export const ChatInput = observer(() => {
     return (
         <div
             className={cn(
-                'flex flex-col w-full text-foreground-tertiary border-t text-small transition-colors duration-200',
+                'flex flex-col text-foreground-tertiary text-small transition-colors duration-200',
+                'm-3 mb-4 shadow-2xl rounded-2xl border',
                 '[&[data-dragging-image=true]]:bg-teal-500/40',
                 isDragging && 'cursor-copy',
             )}
@@ -300,8 +301,8 @@ export const ChatInput = observer(() => {
                             : 'Ask follow up questions or provide more context...'
                     }
                     className={cn(
-                        'mt-2 overflow-auto max-h-32 text-small p-0 border-0 shadow-none rounded-none caret-[#FA003C]',
-                        'selection:bg-[#FA003C]/30 selection:text-[#FA003C] text-foreground-primary',
+                        'mt-2 overflow-auto max-h-32 text-small p-0 border-0 shadow-none rounded-none caret-[#3C3C3C]',
+                        'selection:bg-[#3C3C3C]/30 selection:text-[#3C3C3C] text-foreground-primary',
                         'placeholder:text-foreground-primary/50',
                         'cursor-text',
                         isDragging ? 'pointer-events-none' : 'pointer-events-auto',
@@ -392,7 +393,7 @@ export const ChatInput = observer(() => {
                             </TooltipContent>
                         </TooltipPortal>
                     </Tooltip>
-                    <Tooltip>
+                    {/* <Tooltip>
                         <TooltipTrigger asChild>
                             <Button
                                 variant={'ghost'}
@@ -420,7 +421,7 @@ export const ChatInput = observer(() => {
                                     : 'Add screenshot of the current page'}
                             </TooltipContent>
                         </TooltipPortal>
-                    </Tooltip>
+                    </Tooltip> */}
                     <Button
                         variant={'outline'}
                         className="w-fit h-fit py-0.5 px-2.5 text-foreground-tertiary hidden"
@@ -450,11 +451,11 @@ export const ChatInput = observer(() => {
                     <Button
                         size={'icon'}
                         variant={'secondary'}
-                        className="text-smallPlus w-fit h-full py-0.5 px-2.5 text-primary"
+                        className="text-smallPlus w-fit h-full py-0.5 px-2.5 rounded-full text-primary"
                         disabled={inputEmpty || editorEngine.chat.isWaiting}
                         onClick={sendMessage}
                     >
-                        <Icons.ArrowRight />
+                        <Icons.ArrowUp />
                     </Button>
                 )}
             </div>

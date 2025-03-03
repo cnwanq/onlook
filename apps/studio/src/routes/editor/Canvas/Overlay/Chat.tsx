@@ -133,7 +133,7 @@ export const OverlayChat = observer(
             >
                 <div
                     className={cn(
-                        'rounded-xl backdrop-blur-lg transition-all duration-300',
+                        'rounded-full backdrop-blur-lg transition-all duration-300',
                         'shadow-xl shadow-background-secondary/50',
                         inputState.isVisible
                             ? 'bg-background/80 border shadow-xl shadow-background-secondary/50 p-1'
