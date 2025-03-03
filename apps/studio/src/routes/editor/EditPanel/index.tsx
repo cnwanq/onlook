@@ -144,13 +144,13 @@ const EditPanel = observer(() => {
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
-                        <TabsTrigger
+                        {/* <TabsTrigger
                             className="bg-transparent py-2 px-1 text-small hover:text-foreground-hover"
                             value={EditorTabValue.STYLES}
                         >
                             <Icons.Styles className="mr-1.5 h-4 w-4" />
                             Styles
-                        </TabsTrigger>
+                        </TabsTrigger> */}
                         <TabsTrigger
                             className="bg-transparent py-2 px-1 text-xs hover:text-foreground-hover hidden"
                             value={EditorTabValue.PROPS}
@@ -169,13 +169,13 @@ const EditPanel = observer(() => {
                     <TabsContent value={EditorTabValue.PROPS}>
                         <PropsTab />
                     </TabsContent>
-                    <TabsContent value={EditorTabValue.STYLES}>
+                    {/* <TabsContent value={EditorTabValue.STYLES}>
                         {editorEngine.elements.selected.length > 0 ? (
                             <StylesTab />
                         ) : (
                             renderEmptyState()
                         )}
-                    </TabsContent>
+                    </TabsContent> */}
                 </div>
             </Tabs>
         );

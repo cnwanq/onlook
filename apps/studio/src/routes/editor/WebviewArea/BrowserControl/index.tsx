@@ -377,7 +377,7 @@ const BrowserControls = observer(
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="rounded-md bg-background">
-                            <DropdownMenuItem asChild>
+                            {/* <DropdownMenuItem asChild>
                                 <Button
                                     variant={'ghost'}
                                     className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
@@ -388,7 +388,7 @@ const BrowserControls = observer(
                                         <span>Duplicate Window</span>
                                     </span>
                                 </Button>
-                            </DropdownMenuItem>
+                            </DropdownMenuItem> */}
                             <DropdownMenuItem asChild>
                                 <Button
                                     variant={'ghost'}
@@ -425,7 +425,7 @@ const BrowserControls = observer(
                                     </Button>
                                 </div>
                             </DropdownMenuItem>
-                            <DropdownMenuItem asChild className="p-0">
+                            {/* <DropdownMenuItem asChild className="p-0">
                                 <div className="flex flex-row hover:bg-transparent focus:bg-transparent w-full">
                                     <Button
                                         size={'icon'}
@@ -458,7 +458,7 @@ const BrowserControls = observer(
                                         />
                                     </Button>
                                 </div>
-                            </DropdownMenuItem>
+                            </DropdownMenuItem> */}
                             <DropdownMenuItem asChild>
                                 <Button
                                     variant={'ghost'}
