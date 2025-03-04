@@ -83,7 +83,11 @@ const ProjectBreadcrumb = observer(() => {
                         className="mx-0 px-0 gap-2 text-foreground-onlook text-small hover:text-foreground-active hover:bg-transparent"
                     >
                         {/* <Icons.OnlookLogo className="w-6 h-6 hidden md:block" /> */}
-                        <img src={arcoSMImg} className="w-6 h-6 hidden md:block" alt="Arco Logo" />
+                        <img
+                            src={arcoSMImg}
+                            className="w-6 h-6 hidden md:block ml-1"
+                            alt="Arco Logo"
+                        />
                         <span className="mx-0 max-w-[60px] md:max-w-[100px] lg:max-w-[200px] px-0 text-foreground-onlook text-small truncate cursor-pointer">
                             {projectsManager.project?.name}
                         </span>

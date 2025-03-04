@@ -63,7 +63,7 @@ export default function ProjectSettingsButton({ project }: { project: Project })
             <Button
                 variant="outline"
                 className="bg-black rounded-full text-sm p-0 w-9 h-9 hover:text-black text-white"
-                onClick={() => handleDeleteProject}
+                onClick={() => setShowDeleteDialog(true)}
             >
                 <RiDeleteBin5Line className="w-4 h-4" />
             </Button>
@@ -103,7 +103,7 @@ export default function ProjectSettingsButton({ project }: { project: Project })
                         Delete Project
                     </DropdownMenuItem>
                 </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
 
             <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
                 <AlertDialogContent>
@@ -176,7 +176,7 @@ export default function ProjectSettingsButton({ project }: { project: Project })
                         </Button>
                     </AlertDialogFooter>
                 </AlertDialogContent>
-            </AlertDialog> */}
+            </AlertDialog>
         </>
     );
 }

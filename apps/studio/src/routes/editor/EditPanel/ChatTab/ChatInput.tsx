@@ -220,7 +220,7 @@ export const ChatInput = observer(() => {
         <div
             className={cn(
                 'flex flex-col text-foreground-tertiary text-small transition-colors duration-200',
-                'm-3 mb-4 shadow-2xl rounded-2xl border',
+                'm-3 mb-4 shadow-3xl rounded-3xl border',
                 '[&[data-dragging-image=true]]:bg-teal-500/40',
                 isDragging && 'cursor-copy',
             )}
@@ -301,7 +301,7 @@ export const ChatInput = observer(() => {
                             : 'Ask follow up questions or provide more context...'
                     }
                     className={cn(
-                        'mt-2 overflow-auto max-h-32 text-small p-0 border-0 shadow-none rounded-none caret-[#3C3C3C]',
+                        'mt-0 overflow-auto max-h-32 text-small p-0 border-0 shadow-none rounded-none caret-[#3C3C3C]',
                         'selection:bg-[#3C3C3C]/30 selection:text-[#3C3C3C] text-foreground-primary',
                         'placeholder:text-foreground-primary/50',
                         'cursor-text',

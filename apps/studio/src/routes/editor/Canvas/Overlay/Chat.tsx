@@ -136,8 +136,8 @@ export const OverlayChat = observer(
                         'rounded-full backdrop-blur-lg transition-all duration-300',
                         'shadow-xl shadow-background-secondary/50',
                         inputState.isVisible
-                            ? 'bg-background/80 border shadow-xl shadow-background-secondary/50 p-1'
-                            : 'bg-background-secondary/85 dark:bg-background/85 border-foreground-secondary/20 hover:border-foreground-secondary/50 p-0.5',
+                            ? 'bg-white/80 border shadow-xl shadow-background-secondary/50 p-1'
+                            : 'bg-white/85 dark:bg-background/85 border-foreground-secondary/20 hover:border-foreground-secondary/50 p-0.5',
                         'border flex relative',
                     )}
                 >

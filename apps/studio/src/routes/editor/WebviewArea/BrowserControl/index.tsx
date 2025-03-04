@@ -235,7 +235,7 @@ const BrowserControls = observer(
                 }}
             >
                 {/* Making sure the dropdown arrow is visible */}
-                <div className="absolute right-0 bottom-0 top-0 bg-gradient-to-r from-transparent dark:via-background-primary via-background-tertiary dark:to-background-primary to-background-tertiary w-20 z-50"></div>
+                <div className="absolute right-0 bottom-0 top-0 from-transparent w-20 z-50"></div>
                 <div
                     className={`absolute left-0 flex flex-row z-50`}
                     style={{
@@ -365,9 +365,9 @@ const BrowserControls = observer(
                                 className={cn(
                                     'group transition-none',
                                     state === WebviewState.DOM_ONLOOK_ENABLED && selected
-                                        ? 'hover:text-teal-200 hover:bg-teal-400/10'
+                                        ? 'hover:text-blue-200 hover:bg-blue-400/10'
                                         : state === WebviewState.DOM_NO_ONLOOK && selected
-                                          ? 'hover:text-amber-200 hover:bg-amber-400/10'
+                                          ? 'hover:text-blue-200 hover:bg-blue-400/10'
                                           : '',
                                 )}
                                 size={'icon'}

@@ -422,7 +422,7 @@ const Frame = observer(
                         id={settings.id}
                         ref={webviewRef}
                         className={cn(
-                            'w-[96rem] h-[60rem] backdrop-blur-sm transition outline outline-4',
+                            'w-[96rem] h-fit backdrop-blur-sm transition outline outline-4',
                             shouldShowDomFailed ? 'bg-transparent' : 'bg-white',
                             selected ? getSelectedOutlineColor() : 'outline-transparent',
                         )}

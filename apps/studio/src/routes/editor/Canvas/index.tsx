@@ -168,6 +168,7 @@ const Canvas = observer(({ children }: { children: ReactNode }) => {
                 ref={containerRef}
                 className="overflow-hidden bg-background-onlook flex flex-grow relative"
                 onMouseDown={handleCanvasMouseDown}
+                style={{ backgroundColor: '#F5F5F5' }}
             >
                 <Overlay>
                     <div id={EditorAttributes.CANVAS_CONTAINER_ID} style={transformStyle}>

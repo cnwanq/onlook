@@ -29,7 +29,10 @@ const EditorTopBar = observer(() => {
     ];
 
     return (
-        <div className="bg-background-onlook/60 backdrop-blur-sm flex flex-row h-10 p-2 justify-center items-center">
+        <div
+            className="bg-background-onlook/60 backdrop-blur-sm flex flex-row h-10 p-2 justify-center items-center"
+            style={{ backgroundColor: '#F5F5F5' }}
+        >
             <div className="flex flex-row flex-grow basis-0 space-x-1 justify-start items-center">
                 <ProjectBreadcrumb />
             </div>

@@ -192,7 +192,7 @@ const EditPanel = observer(() => {
             <div
                 id="style-panel"
                 className={cn(
-                    'right-0 absolute transition-width duration-300 opacity-100 bg-background/80 rounded-tl-xl overflow-hidden',
+                    'right-0 absolute transition-width duration-300 opacity-100 bg-background/80 rounded-3xl overflow-hidden',
                     editorEngine.mode === EditorMode.INTERACT ? 'hidden' : 'visible',
                     isOpen
                         ? 'w-full h-[calc(100vh-5rem)]'
@@ -201,7 +201,7 @@ const EditPanel = observer(() => {
             >
                 {!isOpen && (
                     <button
-                        className="absolute right-0 border border-foreground/10 rounded-l-xl w-full h-full flex justify-center items-center text-foreground hover:text-foreground-onlook "
+                        className="absolute right-0 border border-foreground/10 rounded-3xl w-full h-full flex justify-center items-center text-foreground hover:text-foreground-onlook "
                         onClick={() => setIsOpen(true)}
                     >
                         <Icons.PinLeft className="z-51" />
@@ -209,7 +209,7 @@ const EditPanel = observer(() => {
                 )}
                 <div
                     className={cn(
-                        'border backdrop-blur shadow h-full relative transition-opacity duration-300 rounded-tl-xl',
+                        'border backdrop-blur shadow h-full relative transition-opacity duration-300 rounded-3xl',
                         isOpen ? 'opacity-100 visible' : 'opacity-0 invisible',
                     )}
                 >
