@@ -191,7 +191,7 @@ export const PromptingCard = () => {
                             <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="text-4xl text-foreground-primary text-center"
+                                className="text-4xl text-foreground-primary text-center font-timesNewerRoma-BoldItalic"
                             >
                                 All-in-One Website Creation Platform
                             </motion.h2>
@@ -199,7 +199,7 @@ export const PromptingCard = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-sm text-foreground-secondary text-center text-stone-500"
+                                className="text-sm text-foreground-secondary text-center text-stone font-timesNewerRoma-Italic"
                             >
                                 From design to launch, we provide comprehensive support to get your
                                 website online effortlessly.
@@ -208,8 +208,8 @@ export const PromptingCard = () => {
                         <CardContent>
                             <div
                                 className={cn(
-                                    'flex flex-col gap-3 rounded-2xl p-0 transition-colors duration-200 cursor-text',
-                                    'backdrop-blur-sm bg-background-secondary/80',
+                                    'flex flex-col gap-3 rounded-3xl p-0 transition-colors duration-200 cursor-text',
+                                    'bg-white/60 backdrop-blur-md',
                                     '[&[data-dragging-image=true]]:bg-teal-500/40',
                                     isDragging && 'bg-teal-500/40 cursor-copy',
                                 )}
@@ -291,7 +291,7 @@ export const PromptingCard = () => {
                                         style={{ resize: 'none' }}
                                     />
                                 </div>
-                                <div className="flex flex-row w-full justify-between pt-0 pb-2 px-2">
+                                <div className="flex flex-row w-full justify-between pt-0 pb-1 px-2">
                                     <div className="flex flex-row justify-start gap-1.5">
                                         <Tooltip
                                             open={imageTooltipOpen && !isHandlingFile}
@@ -321,7 +321,7 @@ export const PromptingCard = () => {
                                                     />
                                                     <Icons.Image
                                                         className={cn(
-                                                            'w-5 h-5',
+                                                            'w-4 h-4',
                                                             'group-hover:text-foreground',
                                                         )}
                                                     />
@@ -357,7 +357,7 @@ export const PromptingCard = () => {
                                             >
                                                 <Icons.ArrowUp
                                                     className={cn(
-                                                        'w-5 h-5',
+                                                        'w-3 h-3',
                                                         !isInputInvalid
                                                             ? 'text-background'
                                                             : 'text-foreground-primary',

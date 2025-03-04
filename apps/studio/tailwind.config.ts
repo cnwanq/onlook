@@ -34,4 +34,14 @@ export default {
     content: ['./src/**/*.{ts,tsx}', '../../packages/ui/src/**/*.{ts,tsx}'],
     presets: [baseConfig],
     plugins: [typography, exposeColorsAsCssVariables],
+    theme: {
+        extend: {
+            fontFamily: {
+                'timesNewerRoma-Italic': ['TimesNewerRoma-Italic'],
+                'timesNewerRoma-Bold': ['TimesNewerRoma-Bold'],
+                'timesNewerRoma-BoldItalic': ['TimesNewerRoma-BoldItalic'],
+                'timesNewerRoma-Regular': ['TimesNewerRoma-Regular'],
+            },
+        },
+    },
 } satisfies Config;

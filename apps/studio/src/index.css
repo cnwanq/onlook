@@ -21,3 +21,23 @@ p {
     outline: none !important;
     box-shadow: unset !important;
 }
+
+@font-face {
+    font-family: 'TimesNewerRoma-Bold';
+    src: url('../src/assets/fonts/TimesNewerRoman-Bold.otf');
+}
+
+@font-face {
+    font-family: 'TimesNewerRoma-BoldItalic';
+    src: url('./assets/fonts/TimesNewerRoman-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'TimesNewerRoma-Italic';
+    src: url('./assets/fonts/TimesNewerRoman-Italic.otf');
+}
+
+@font-face {
+    font-family: 'TimesNewerRoma-Regular';
+    src: url('./assets/fonts/TimesNewerRoman-Regular.otf');
+}

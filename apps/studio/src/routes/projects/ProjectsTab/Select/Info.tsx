@@ -44,7 +44,11 @@ const ProjectInfo = observer(({ project, direction }: { project: Project; direct
                     <p>{project.url}</p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full">
+                {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full">
+                    <EditAppButton project={project} />
+                    <ProjectSettingsButton project={project} />
+                </div> */}
+                <div className="flex flex-row">
                     <EditAppButton project={project} />
                     <ProjectSettingsButton project={project} />
                 </div>

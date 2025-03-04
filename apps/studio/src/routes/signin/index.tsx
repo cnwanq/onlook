@@ -6,6 +6,7 @@ import { Button } from '@onlook/ui/button';
 import { Icons } from '@onlook/ui/icons';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
+import DiscordLogoImg from '@/assets/Discord.png';
 
 enum SignInMethod {
     GITHUB = 'github',
@@ -34,7 +35,7 @@ const SignIn = observer(() => {
     }
 
     return (
-        <div className="flex h-[calc(100vh-2.5rem)]">
+        <div className="flex h-[calc(100vh-2.5rem)]" style={{ backgroundColor: '#ECECEC' }}>
             <div className="flex flex-col justify-between w-full h-full max-w-xl p-24 space-y-8 overflow-auto">
                 <div className="flex items-center space-x-2">
                     {/* <Icons.OnlookTextLogo viewBox="0 0 139 17" /> */}
@@ -44,10 +45,10 @@ const SignIn = observer(() => {
                         <p>{'Alpha'}</p>
                     </div> */}
                     <div className="space-y-4">
-                        <h1 className="text-title1 leading-tight">
-                            {lastSignInMethod ? 'Welcome back to Arco 👋' : 'Welcome to Arco 👋'}
+                        <h1 className="text-title1 leading-tight font-timesNewerRoma-BoldItalic">
+                            {'Welcome to Arco 👋'}
                         </h1>
-                        <p className="text-foreground-onlook text-regular">
+                        <p className="text-foreground-onlook text-regular text-small">
                             {
                                 "Today is a new day. It's your day. You shape it. Sign in to start managing your projects."
                             }
@@ -57,7 +58,7 @@ const SignIn = observer(() => {
                         <div className="items-center w-full">
                             <Button
                                 variant="outline"
-                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 rounded-full`}
+                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 hover:text-white/60 rounded-full h-12`}
                                 onClick={() => handleLogin(SignInMethod.GOOGLE)}
                             >
                                 <Icons.GoogleLogo viewBox="0 0 24 24" className="w-4 h-4 mr-2" />
@@ -68,10 +69,11 @@ const SignIn = observer(() => {
                         <div className="items-center w-full ">
                             <Button
                                 variant="outline"
-                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 rounded-full`}
+                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 hover:text-white/60 rounded-full h-12`}
                                 onClick={() => handleLogin(SignInMethod.DISCORD)}
                             >
-                                <Icons.DiscordLogo className="w-4 h-4 mr-2" />{' '}
+                                {/* <Icons.DiscordLogo className="w-4 h-4 mr-2" /> */}
+                                <img src={DiscordLogoImg} className="w-4 h-4 mr-2" />
                                 {'Continue with Discord'}
                             </Button>
                         </div>
@@ -79,10 +81,10 @@ const SignIn = observer(() => {
                         <div className="items-center w-full ">
                             <Button
                                 variant="outline"
-                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 rounded-full`}
+                                className={`w-full text-active text-sm bg-black border-teal-700 text-white hover:bg-black/80 hover:bg-black/80 hover:text-white/60 rounded-full h-12`}
                                 onClick={() => handleLogin(SignInMethod.GITHUB)}
                             >
-                                <Icons.GitHubLogo className="w-4 h-4 mr-2" />{' '}
+                                <Icons.GitHubLogo className="w-4 h-4 mr-2" />
                                 {'Continue with Github'}
                             </Button>
                         </div>
