@@ -35,7 +35,7 @@ const SignIn = observer(() => {
     }
 
     return (
-        <div className="flex h-[calc(100vh-2.5rem)]" style={{ backgroundColor: '#ECECEC' }}>
+        <div className="flex h-[calc(100vh-2.5rem)]" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="flex flex-col justify-between w-full h-full max-w-xl p-24 space-y-8 overflow-auto">
                 <div className="flex items-center space-x-2">
                     {/* <Icons.OnlookTextLogo viewBox="0 0 139 17" /> */}

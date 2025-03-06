@@ -193,7 +193,7 @@ const LayersPanel = observer(() => {
             {isContentPanelOpen && (
                 <>
                     <div
-                        className="flex-1 w-[280px] bg-background/80 rounded-3xl"
+                        className="flex-1 w-[280px] bg-background/80 rounded-3xl mb-4"
                         onMouseEnter={() => setIsContentPanelOpen(true)}
                     >
                         <div className="border backdrop-blur h-full shadow overflow-auto p-0 rounded-3xl">

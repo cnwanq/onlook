@@ -131,9 +131,9 @@ const TreeNode = observer(
                         'rounded-b': isParentSelected && parentGroupEnd(node),
                         'rounded-none': isParentSelected && node.nextSibling,
                         'bg-background-onlook': hovered,
-                        'bg-blue dark:bg-[#FA003C]/90': selected,
-                        'bg-blue/10 dark:bg-[#FA003C]/10': isParentSelected,
-                        'bg-blue/20 dark:bg-[#FA003C]/20': hovered && isParentSelected,
+                        'bg-[#007AFF]/30 dark:bg-[#FA003C]/90': selected,
+                        'bg-[#007AFF]/10 dark:bg-[#FA003C]/10': isParentSelected,
+                        'bg-[#007AFF]/20 dark:bg-[#FA003C]/20': hovered && isParentSelected,
                         'text-purple-100 dark:text-purple-100': node.data.instanceId && selected,
                         'text-purple-500 dark:text-purple-300': node.data.instanceId && !selected,
                         'text-purple-800 dark:text-purple-200':
