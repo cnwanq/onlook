@@ -12,7 +12,7 @@ export class UpdateManager {
 
     listen() {
         window.api.on(MainChannels.UPDATE_DOWNLOADED, async (e, args) => {
-            this.updateAvailable = true;
+            this.updateAvailable = false;
         });
 
         window.api.on(MainChannels.UPDATE_NOT_AVAILABLE, async (e, args) => {

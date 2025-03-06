@@ -23,6 +23,7 @@ export default defineConfig(({ command }) => {
     }
 
     return {
+        base: './',
         resolve: {
             alias: {
                 '@': path.join(__dirname, 'src'),

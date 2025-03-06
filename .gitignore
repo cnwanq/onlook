@@ -36,5 +36,7 @@ yarn.lock
 # Env variables
 .env
 
+*/**/releases/*
+
 # Supabase
 apps/backend

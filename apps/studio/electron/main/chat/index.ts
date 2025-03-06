@@ -14,7 +14,7 @@ import { mainWindow } from '..';
 import { PersistentStorage } from '../storage';
 import { initModel } from './llmProvider';
 
-import openai from 'openai';
+// import openai from 'openai';
 
 class LlmManager {
     private static instance: LlmManager;
