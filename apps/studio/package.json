@@ -157,6 +157,15 @@
             "./dist-electron",
             "./dist"
         ],
+        "extraResources": [
+            {
+                "from": "resources/bun",
+                "to": "bun",
+                "filter": [
+                    "**/*"
+                ]
+            }
+        ],
         "dmg": {
             "contents": [
                 {
