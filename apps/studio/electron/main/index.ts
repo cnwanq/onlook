@@ -66,6 +66,7 @@ const createWindow = () => {
         webPreferences: {
             preload: PRELOAD_PATH,
             webviewTag: true,
+            webSecurity: false,
         },
     });
     return mainWindow;

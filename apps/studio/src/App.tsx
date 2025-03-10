@@ -9,6 +9,10 @@ import Routes from './routes';
 import '@fontsource-variable/inter';
 
 function App() {
+    // fetch('https://httpbin.org/get')
+    // .then(response => response.json())
+    // .then(data => console.log('测试请求成功:', data))
+    // .catch(error => console.error('请求失败:', error));
     return (
         <I18nextProvider i18n={i18n}>
             <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">

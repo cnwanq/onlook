@@ -139,13 +139,7 @@
         "directories": {
             "output": "releases"
         },
-        "nsis": {
-            "oneClick": false,
-            "allowElevation": true,
-            "allowToChangeInstallationDirectory": true,
-            "createDesktopShortcut": true,
-            "createStartMenuShortcut": true
-        },
+        "nsis": {},
         "publish": [
             {
                 "provider": "github",
@@ -154,8 +148,8 @@
             }
         ],
         "files": [
-            "./dist-electron",
-            "./dist"
+            "dist-electron",
+            "dist"
         ],
         "extraResources": [
             {
@@ -182,7 +176,26 @@
             ]
         },
         "mac": {
-            "icon": "build/icon.icns"
+            "icon": "build/icon.icns",
+            "category": "public.app-category.developer-tools",
+            "hardenedRuntime": true,
+            "gatekeeperAssess": false,
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ]
+                },
+                {
+                    "target": "zip",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ]
+                }
+            ]
         },
         "win": {
             "icon": "build/icon.ico",
