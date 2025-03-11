@@ -19,7 +19,9 @@ export const CreateLoadingCard = observer(() => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ height: diffHeight, opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className={cn('w-[600px] mb-32 backdrop-blur-md bg-background/30 overflow-hidden')}
+                className={cn(
+                    'w-[600px] mb-32 backdrop-blur-md bg-background/30 overflow-hidden rounded-3xl',
+                )}
             >
                 <motion.div ref={diffRef} layout="position" className="flex flex-col">
                     <CardHeader>
@@ -45,7 +47,7 @@ export const CreateLoadingCard = observer(() => {
                             <div className="flex flex-row w-full justify-between mt-4">
                                 <Button
                                     variant="outline"
-                                    className="text-foreground-tertiary text-sm"
+                                    className="text-foreground-tertiary text-sm rounded-full"
                                     onClick={() => projectsManager.create.cancel()}
                                 >
                                     <Icons.CircleBackslash className="w-4 h-4 mr-2" />

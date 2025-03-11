@@ -331,14 +331,15 @@ const ImagesTab = observer(() => {
                                 onMouseDown={() => (editorEngine.mode = EditorMode.INSERT_IMAGE)}
                                 onMouseUp={() => (editorEngine.mode = EditorMode.DESIGN)}
                             >
-                                <div className="w-full h-[120px] flex flex-col justify-center rounded-lg overflow-hidden items-center cursor-move">
+                                <div className="w-full h-[120px] flex flex-col justify-center rounded-2xl overflow-hidden items-center cursor-move border border-border-primary rounded-md bg-background-secondary p-1 rounded-lg">
                                     <img
                                         className="w-full h-full object-cover"
                                         src={image.content}
                                         alt={image.fileName}
+                                        style={{ objectFit: 'contain' }}
                                     />
                                 </div>
-                                <span className="text-xs block w-full text-center truncate">
+                                <span className="text-xs block w-full text-start truncate">
                                     {imageToRename === image.fileName ? (
                                         <input
                                             type="text"

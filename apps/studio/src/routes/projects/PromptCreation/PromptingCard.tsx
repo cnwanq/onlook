@@ -23,7 +23,7 @@ export const PromptingCard = () => {
     const [imageTooltipOpen, setImageTooltipOpen] = useState(false);
     const [isHandlingFile, setIsHandlingFile] = useState(false);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
-    const isInputInvalid = !inputValue || inputValue.trim().length < 10;
+    const isInputInvalid = !inputValue || inputValue.trim().length < 4;
     const [isComposing, setIsComposing] = useState(false);
     const imageRef = useRef<HTMLInputElement>(null);
 
@@ -378,7 +378,7 @@ export const PromptingCard = () => {
                 </MotionCard>
                 <Button
                     variant="outline"
-                    className="w-fit mx-auto bg-background-secondary/90 text-sm border text-foreground-secondary"
+                    className="w-fit mx-auto bg-background-secondary/90 text-sm border text-foreground-secondary rounded-full"
                     onClick={handleBlankSubmit}
                 >
                     <Icons.File className="w-4 h-4 mr-2" /> Start from a blank page

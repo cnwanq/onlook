@@ -299,7 +299,7 @@ export const ClickRect = ({
     };
 
     const renderDimensionLabels = () => {
-        const rectColor = isComponent ? colors.purple[500] : colors.red[500];
+        const rectColor = isComponent ? colors.purple[500] : '#007AFF'; //colors.red[500];
         const displayWidth = parseFloat(styles?.width || '0').toFixed(0);
         const displayHeight = parseFloat(styles?.height || '0').toFixed(0);
         const text = `${displayWidth} × ${displayHeight}`;

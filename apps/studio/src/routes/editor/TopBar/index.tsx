@@ -91,7 +91,7 @@ const EditorTopBar = observer(() => {
                                         <Button
                                             variant="ghost"
                                             size="icon"
-                                            className="h-8 bg-white rounded-full m-1"
+                                            className="h-8 w-8 bg-white rounded-full m-1"
                                             onClick={click}
                                             disabled={isDisabled}
                                         >

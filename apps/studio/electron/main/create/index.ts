@@ -130,7 +130,7 @@ export class ProjectCreator {
         }
 
         const documentsPath = app.getPath('documents');
-        const projectsPath = path.join(documentsPath, 'Onlook', 'Projects');
+        const projectsPath = path.join(documentsPath, 'Arco', 'Projects');
         await fs.promises.mkdir(projectsPath, { recursive: true });
         const projectName = `project-${Date.now()}`;
 

@@ -93,16 +93,14 @@ const LayersPanel = observer(() => {
                     className={cn(
                         'w-10 h-10 rounded-full flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.LAYERS && isLocked
-                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20'
-                            : 'text-muted-foreground hover:text-foreground',
+                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20 text-white'
+                            : 'text-muted-foreground text-black',
+                        'hover:bg-[#000000]/10 hover:text-black',
                     )}
                     onClick={() => handleClick(TabValue.LAYERS)}
                     onMouseEnter={() => handleMouseEnter(TabValue.LAYERS)}
                 >
-                    <Icons.Layers
-                        className="w-5 h-5"
-                        color={cn(selectedTab === TabValue.LAYERS && isLocked ? 'white' : 'black')}
-                    />
+                    <Icons.Layers className="w-5 h-5" />
                     {/* <span className="text-xs leading-tight">Layers</span> */}
                 </button>
 
@@ -110,16 +108,14 @@ const LayersPanel = observer(() => {
                     className={cn(
                         'w-10 h-10 rounded-full flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.PAGES && isLocked
-                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20'
-                            : 'text-muted-foreground hover:text-foreground',
+                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20 text-white'
+                            : 'text-muted-foreground text-black',
+                        'hover:bg-[#000000]/10 hover:text-black',
                     )}
                     onClick={() => handleClick(TabValue.PAGES)}
                     onMouseEnter={() => handleMouseEnter(TabValue.PAGES)}
                 >
-                    <Icons.File
-                        className="w-5 h-5"
-                        color={cn(selectedTab === TabValue.PAGES && isLocked ? 'white' : 'black')}
-                    />
+                    <Icons.File className="w-5 h-5" />
                     {/* <span className="text-xs leading-tight">Pages</span> */}
                 </button>
 
@@ -127,16 +123,14 @@ const LayersPanel = observer(() => {
                     className={cn(
                         'w-10 h-10 rounded-full flex flex-col items-center justify-center gap-1.5 p-2',
                         selectedTab === TabValue.IMAGES && isLocked
-                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20'
-                            : 'text-muted-foreground hover:text-foreground',
+                            ? 'bg-black text-foreground border-[0.5px] border-foreground/20 text-white'
+                            : 'text-muted-foreground text-black',
+                        'hover:bg-[#000000]/10 hover:text-black',
                     )}
                     onClick={() => handleClick(TabValue.IMAGES)}
                     onMouseEnter={() => handleMouseEnter(TabValue.IMAGES)}
                 >
-                    <Icons.Image
-                        className="w-5 h-5"
-                        color={cn(selectedTab === TabValue.IMAGES && isLocked ? 'white' : 'black')}
-                    />
+                    <Icons.Image className="w-5 h-5" />
                     {/* <span className="text-xs leading-tight">Images</span> */}
                 </button>
 

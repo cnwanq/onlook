@@ -62,7 +62,7 @@ export default function ProjectSettingsButton({ project }: { project: Project })
             <div className="w-2"></div>
             <Button
                 variant="outline"
-                className="bg-black rounded-full text-sm p-0 w-9 h-9 hover:text-black text-white"
+                className="bg-black rounded-full text-sm p-0 w-9 h-9 text-white  hover:bg-[#424242] hover:text-white"
                 onClick={() => setShowDeleteDialog(true)}
             >
                 <RiDeleteBin5Line className="w-4 h-4" />

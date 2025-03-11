@@ -24,7 +24,7 @@ export default function EditAppButton({ project, ...props }: EditAppButtonProps)
         <ButtonMotion
             size="default"
             variant={'outline'}
-            className="gap-2 bg-background-active border-[0.5px] border-border-active w-full lg:w-auto bg-black text-white rounded-full text-sm"
+            className="gap-2 bg-background-active border-[0.5px] border-border-active w-full lg:w-auto bg-black text-white rounded-full text-sm hover:bg-[#424242] hover:text-white"
             onClick={() => selectProject(project)}
             {...props}
         >

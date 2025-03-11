@@ -376,7 +376,7 @@ const BrowserControls = observer(
                                 <Icons.ChevronDown className="text-inherit h-4 w-4 rotate-0 group-data-[state=open]:-rotate-180 duration-200 ease-in-out" />
                             </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className="rounded-md bg-background">
+                        <DropdownMenuContent className="rounded-3xl bg-background">
                             {/* <DropdownMenuItem asChild>
                                 <Button
                                     variant={'ghost'}
