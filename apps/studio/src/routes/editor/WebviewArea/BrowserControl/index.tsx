@@ -392,7 +392,7 @@ const BrowserControls = observer(
                             <DropdownMenuItem asChild>
                                 <Button
                                     variant={'ghost'}
-                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                     onClick={reload}
                                 >
                                     <span className="flex w-full items-center text-smallPlus">
@@ -405,7 +405,7 @@ const BrowserControls = observer(
                                 <div className="flex flex-row hover:bg-transparent focus:bg-transparent w-full">
                                     <Button
                                         variant={'ghost'}
-                                        className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                        className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                         onClick={goBack}
                                         disabled={!canGoBack()}
                                     >
@@ -414,7 +414,7 @@ const BrowserControls = observer(
                                     </Button>
                                     <Button
                                         variant={'ghost'}
-                                        className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                        className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                         onClick={goForward}
                                         disabled={!canGoForward()}
                                     >
@@ -462,7 +462,7 @@ const BrowserControls = observer(
                             <DropdownMenuItem asChild>
                                 <Button
                                     variant={'ghost'}
-                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                     onClick={() => editorEngine.deleteWindow(settings.id)}
                                     disabled={!editorEngine.canDeleteWindow()}
                                 >

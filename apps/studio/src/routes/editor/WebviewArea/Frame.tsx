@@ -387,24 +387,37 @@ const Frame = observer(
             }
         }
 
+        function renderBrowserControls() {
+            return (
+                <>
+                    {editorEngine.mode === EditorMode.INTERACT ? (
+                        <></>
+                    ) : (
+                        <BrowserControls
+                            webviewRef={domReady ? webviewRef : null}
+                            webviewSrc={webviewSrc}
+                            setWebviewSrc={setWebviewSrc}
+                            selected={selected}
+                            hovered={hovered}
+                            setHovered={setHovered}
+                            setDarkmode={setDarkmode}
+                            settings={settings}
+                            startMove={startMove}
+                            domState={domState}
+                            webviewSize={webviewSize}
+                        />
+                    )}
+                </>
+            );
+        }
+
         return (
             <div
                 className="flex flex-col fixed"
                 style={{ transform: `translate(${webviewPosition.x}px, ${webviewPosition.y}px)` }}
             >
-                <BrowserControls
-                    webviewRef={domReady ? webviewRef : null}
-                    webviewSrc={webviewSrc}
-                    setWebviewSrc={setWebviewSrc}
-                    selected={selected}
-                    hovered={hovered}
-                    setHovered={setHovered}
-                    setDarkmode={setDarkmode}
-                    settings={settings}
-                    startMove={startMove}
-                    domState={domState}
-                    webviewSize={webviewSize}
-                />
+                {renderBrowserControls()}
+
                 <div className="relative">
                     <ResizeHandles
                         webviewRef={webviewRef}
@@ -422,17 +435,24 @@ const Frame = observer(
                         id={settings.id}
                         ref={webviewRef}
                         className={cn(
-                            'w-[96rem] h-fit backdrop-blur-sm transition outline outline-4',
+                            'backdrop-blur-sm transition outline outline-4',
                             shouldShowDomFailed ? 'bg-transparent' : 'bg-white',
                             selected ? getSelectedOutlineColor() : 'outline-transparent',
+                            editorEngine.mode === EditorMode.INTERACT
+                                ? 'w-screen h-screen'
+                                : 'w-[96rem] h-fit',
                         )}
                         src={settings.url}
                         preload={`file://${window.env.WEBVIEW_PRELOAD_PATH}`}
                         allowpopups={'true' as any}
-                        style={{
-                            width: clampedDimensions.width,
-                            height: clampedDimensions.height,
-                        }}
+                        style={
+                            editorEngine.mode === EditorMode.INTERACT
+                                ? {}
+                                : {
+                                      width: clampedDimensions.width,
+                                      height: clampedDimensions.height,
+                                  }
+                        }
                     ></webview>
                     <GestureScreen
                         isResizing={isResizing}

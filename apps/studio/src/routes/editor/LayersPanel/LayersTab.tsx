@@ -124,33 +124,38 @@ const LayersTab = observer(() => {
     );
 
     return (
-        <div
-            ref={ref}
-            className="flex h-full w-full overflow-hidden text-xs text-active p-3"
-            onMouseOver={() => setTreeHovered(true)}
-            onMouseLeave={handleMouseLeaveTree}
-        >
-            <RightClickMenu>
-                <Tree
-                    idAccessor={(node) => node.domId}
-                    childrenAccessor={childrenAccessor}
-                    ref={treeRef}
-                    data={editorEngine.ast.mappings.filteredLayers}
-                    openByDefault={true}
-                    overscanCount={0}
-                    indent={8}
-                    padding={0}
-                    rowHeight={24}
-                    height={height ?? 300}
-                    width={width ?? 365}
-                    renderRow={TreeRow as any}
-                    onMove={handleDragEnd}
-                    disableDrop={disableDrop}
-                    className="overflow-auto"
-                >
-                    {(props) => <TreeNode {...props} treeHovered={treeHovered} />}
-                </Tree>
-            </RightClickMenu>
+        <div className="flex flex-col h-full">
+            <div className="pt-4 pl-3 sticky">
+                <span className="text-lg font-timesNewerRoma-Italic">Layers</span>
+            </div>
+            <div
+                ref={ref}
+                className="flex h-full w-full overflow-hidden text-xs text-active p-2 flex-1 overflow-y-auto"
+                onMouseOver={() => setTreeHovered(true)}
+                onMouseLeave={handleMouseLeaveTree}
+            >
+                <RightClickMenu>
+                    <Tree
+                        idAccessor={(node) => node.domId}
+                        childrenAccessor={childrenAccessor}
+                        ref={treeRef}
+                        data={editorEngine.ast.mappings.filteredLayers}
+                        openByDefault={true}
+                        overscanCount={0}
+                        indent={8}
+                        padding={0}
+                        rowHeight={24}
+                        height={height ?? 300}
+                        width={width ?? 365}
+                        renderRow={TreeRow as any}
+                        onMove={handleDragEnd}
+                        disableDrop={disableDrop}
+                        className="overflow-auto"
+                    >
+                        {(props) => <TreeNode {...props} treeHovered={treeHovered} />}
+                    </Tree>
+                </RightClickMenu>
+            </div>
         </div>
     );
 });

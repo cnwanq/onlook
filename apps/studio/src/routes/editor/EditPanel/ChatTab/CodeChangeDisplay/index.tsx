@@ -31,7 +31,7 @@ export const CodeChangeDisplay = ({
     };
 
     return (
-        <div className="group relative">
+        <div className="group relative bg-white">
             <CollapsibleCodeBlock
                 path={path}
                 content={content}

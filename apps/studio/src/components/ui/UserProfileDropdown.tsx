@@ -29,7 +29,7 @@ const UserProfileDropdown = observer(
                 <DropdownMenuTrigger asChild>
                     <Button
                         className={cn(
-                            'w-8 h-8 p-0 bg-background-onlook rounded-full focus:outline-none group',
+                            'w-8 h-8 p-0 bg-background-onlook rounded-full focus:outline-none group shadow',
                             buttonClassName,
                         )}
                     >

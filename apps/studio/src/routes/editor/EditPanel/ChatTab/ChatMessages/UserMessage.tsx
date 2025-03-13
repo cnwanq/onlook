@@ -95,7 +95,7 @@ const UserMessage = ({ message }: UserMessageProps) => {
 
     function renderButtons() {
         return (
-            <div className="absolute right-2 top-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 bg-background-primary">
+            <div className="absolute right-2 top-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 bg-[#F5F5F5]">
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <Button
@@ -146,7 +146,7 @@ const UserMessage = ({ message }: UserMessageProps) => {
 
     return (
         <div className="relative group w-full flex flex-row justify-end px-2" key={message.id}>
-            <div className="w-[90%] flex flex-col ml-8 p-2 rounded-lg shadow-sm rounded-br-none border-[0.5px] bg-background-primary relative">
+            <div className="w-[90%] flex flex-col ml-8 p-2 rounded-lg shadow-sm rounded-br-none border-[0.5px] bg-[#F5F5F5] relative">
                 {!isEditing && renderButtons()}
                 <div className="h-6 relative">
                     <div className="absolute top-1 left-0 right-0 flex flex-row justify-start items-center w-full overflow-auto pr-16">

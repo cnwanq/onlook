@@ -40,7 +40,7 @@ export const TopBar = observer(() => {
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button
-                            className="text-sm text-foreground-onlook focus:outline-none bg-white rounded-full"
+                            className="text-sm text-foreground-onlook focus:outline-none bg-white rounded-full shadow"
                             variant="ghost"
                         >
                             <Icons.Plus className="w-5 h-5 mr-2" />

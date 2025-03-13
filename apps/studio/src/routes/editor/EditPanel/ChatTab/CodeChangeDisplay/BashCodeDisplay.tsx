@@ -78,7 +78,7 @@ const BashCodeDisplay = observer(
                     ) : (
                         <Button
                             size={'sm'}
-                            className="group flex flex-grow rounded-none gap-2 px-1 bg-teal-400/20 text-teal-200 hover:bg-teal-400/40 hover:text-teal-100"
+                            className="group flex flex-grow rounded-none gap-2 px-1 bg-[#007AFF]/20 text-[#007AFF] hover:bg-[#007AFF]/40 hover:text-[#007AFF]"
                             variant={'ghost'}
                             onClick={runCommand}
                             disabled={running || isStream}
@@ -86,7 +86,7 @@ const BashCodeDisplay = observer(
                             {running ? (
                                 <Icons.Shadow className="animate-spin" />
                             ) : (
-                                <Icons.Play className="text-teal-300 group-hover:text-teal-100 transition-none" />
+                                <Icons.Play className="text-[#007AFF] group-hover:text-[#007AFF] transition-none" />
                             )}
                             Run command
                         </Button>

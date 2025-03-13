@@ -63,6 +63,7 @@ export const PublishButton = observer(() => {
                     'px-3 flex items-center border-[0.5px] text-xs justify-center shadow-sm h-8 rounded-full transition-all duration-300 ease-in-out',
                     colorClasses,
                     'bg-black text-white hover:bg-black hover:text-white mr-2',
+                    'hover:bg-[#353535]',
                 )}
             >
                 {/* {icon} */}

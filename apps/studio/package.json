@@ -1,5 +1,5 @@
 {
-    "productName": "Onlook",
+    "productName": "Arco",
     "name": "@onlook/studio",
     "version": "0.2.7",
     "homepage": "https://onlook.com",
@@ -7,7 +7,7 @@
     "description": "The first-ever devtool for designers",
     "license": "Apache-2.0",
     "author": {
-        "name": "Onlook",
+        "name": "Arco",
         "email": "contact@onlook.com"
     },
     "private": true,
@@ -132,9 +132,9 @@
         "vite-plugin-electron-renderer": "^0.14.5"
     },
     "build": {
-        "productName": "Onlook-beta",
-        "appId": "dev.onlook.studio",
-        "copyright": "onlook-dev",
+        "productName": "Arco",
+        "appId": "dev.acro.studio",
+        "copyright": "acro-dev",
         "asar": true,
         "directories": {
             "output": "releases"
@@ -143,8 +143,8 @@
         "publish": [
             {
                 "provider": "github",
-                "owner": "onlook-dev",
-                "repo": "onlook"
+                "owner": "acro-dev",
+                "repo": "acro"
             }
         ],
         "files": [

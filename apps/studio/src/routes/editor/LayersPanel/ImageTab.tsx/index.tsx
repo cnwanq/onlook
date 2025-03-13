@@ -247,7 +247,8 @@ const ImagesTab = observer(() => {
             {!!imageAssets.length && (
                 <div className="flex flex-row items-center gap-2 m-0">
                     <div className="relative min-w-0 flex-1">
-                        <Input
+                        <span className="text-lg font-timesNewerRoma-Italic">Images</span>
+                        {/* <Input
                             ref={inputRef}
                             className="h-8 text-xs pr-8 w-full"
                             placeholder="Search pages"
@@ -262,14 +263,15 @@ const ImagesTab = observer(() => {
                             >
                                 <Icons.CrossS className="h-3 w-3 text-foreground-primary/50 group-hover:text-foreground-primary" />
                             </button>
-                        )}
+                        )} */}
                     </div>
                     <Tooltip>
                         <TooltipTrigger>
                             <Button
                                 variant={'default'}
                                 size={'icon'}
-                                className="p-2 w-fit h-fit text-foreground-primary border-border-primary hover:border-border-onlook bg-background-secondary hover:bg-background-onlook border"
+                                className="p-2 w-fit h-fit text-black bg-transparent  hover:bg-background-onlook border-none shadow-none
+                                rounded-full"
                                 onClick={handleClickAddButton}
                             >
                                 <Icons.Plus />
@@ -331,7 +333,7 @@ const ImagesTab = observer(() => {
                                 onMouseDown={() => (editorEngine.mode = EditorMode.INSERT_IMAGE)}
                                 onMouseUp={() => (editorEngine.mode = EditorMode.DESIGN)}
                             >
-                                <div className="w-full h-[120px] flex flex-col justify-center rounded-2xl overflow-hidden items-center cursor-move border border-border-primary rounded-md bg-background-secondary p-1 rounded-lg">
+                                <div className="w-full h-[120px] flex flex-col justify-center rounded-2xl overflow-hidden items-center cursor-move border border-border-primary rounded-xl bg-background-secondary p-1 rounded-lg">
                                     <img
                                         className="w-full h-full object-cover"
                                         src={image.content}
@@ -339,7 +341,7 @@ const ImagesTab = observer(() => {
                                         style={{ objectFit: 'contain' }}
                                     />
                                 </div>
-                                <span className="text-xs block w-full text-start truncate">
+                                <span className="text-xs block w-full text-start truncate pt-1 mb-1">
                                     {imageToRename === image.fileName ? (
                                         <input
                                             type="text"
@@ -375,13 +377,13 @@ const ImagesTab = observer(() => {
                                         <DropdownMenuTrigger>
                                             <Button
                                                 variant={'ghost'}
-                                                className="bg-background p-1 inline-flex items-center justify-center h-auto w-auto rounded shadow-sm"
+                                                className="bg-background p-1 inline-flex items-center justify-center h-auto w-auto rounded-full shadow-sm"
                                             >
                                                 <Icons.DotsHorizontal className="text-foreground dark:text-white w-4 h-4" />
                                             </Button>
                                         </DropdownMenuTrigger>
                                         <DropdownMenuContent
-                                            className="rounded-md bg-background"
+                                            className="rounded-3xl bg-background"
                                             align="start"
                                             side="right"
                                         >
@@ -389,7 +391,7 @@ const ImagesTab = observer(() => {
                                                 <Button
                                                     onClick={() => handleRenameImage(image)}
                                                     variant={'ghost'}
-                                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                                 >
                                                     <span className="flex w-full text-smallPlus items-center">
                                                         <Icons.Pencil className="mr-2 h-4 w-4 text-foreground-secondary group-hover:text-foreground-active" />
@@ -400,7 +402,7 @@ const ImagesTab = observer(() => {
                                             <DropdownMenuItem asChild>
                                                 <Button
                                                     variant={'ghost'}
-                                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                                     onClick={() => handleDeleteImage(image)}
                                                 >
                                                     <span className="flex w-full text-smallPlus items-center">
@@ -412,7 +414,7 @@ const ImagesTab = observer(() => {
                                             <DropdownMenuItem asChild>
                                                 <Button
                                                     variant={'ghost'}
-                                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-sm group"
+                                                    className="hover:bg-background-secondary focus:bg-background-secondary w-full rounded-full group"
                                                     onClick={() => {
                                                         if (!imageFolder) {
                                                             return;

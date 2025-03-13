@@ -9,6 +9,7 @@ import ModeToggle from './ModeToggle';
 import ProjectBreadcrumb from './ProjectSelect';
 import Publish from './Publish';
 import { Hotkey } from '/common/hotkeys';
+import { cn } from '@onlook/ui/utils';
 
 const EditorTopBar = observer(() => {
     const editorEngine = useEditorEngine();
@@ -91,7 +92,10 @@ const EditorTopBar = observer(() => {
                                         <Button
                                             variant="ghost"
                                             size="icon"
-                                            className="h-8 w-8 bg-white rounded-full m-1"
+                                            className={cn(
+                                                'h-8 w-8 bg-white rounded-full m-1 hover:bg-black/10 hover:text-black/15',
+                                                isDisabled ? 'text-black/15' : 'text-black',
+                                            )}
                                             onClick={click}
                                             disabled={isDisabled}
                                         >

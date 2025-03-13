@@ -53,7 +53,7 @@ const ChatHistory = observer(({ isOpen, onOpenChange }: ChatHistoryProps) => {
                 <Button
                     variant={'ghost'}
                     size={'icon'}
-                    className={cn('p-2 w-fit h-fit', {
+                    className={cn('p-2 w-fit h-fit rounded-full', {
                         'bg-background-secondary text-primary': isOpen,
                     })}
                 >
@@ -85,7 +85,7 @@ const ChatHistory = observer(({ isOpen, onOpenChange }: ChatHistoryProps) => {
                                         {sortedConversations.map((conversation) => (
                                             <button
                                                 className={cn(
-                                                    'flex flex-row w-full py-2 items-center rounded-md hover:bg-background-onlook cursor-pointer select-none group relative',
+                                                    'flex flex-row w-full py-2 items-center rounded-full hover:bg-background-onlook cursor-pointer select-none group relative',
                                                     conversation.id ===
                                                         editorEngine.chat.conversation.current
                                                             ?.id &&
@@ -107,7 +107,7 @@ const ChatHistory = observer(({ isOpen, onOpenChange }: ChatHistoryProps) => {
                                                         <Button
                                                             variant={'ghost'}
                                                             size={'icon'}
-                                                            className="absolute right-0 px-2.5 py-2 top-1/2 -translate-y-1/2 w-fit h-fit opacity-0 group-hover:opacity-100 group-hover:bg-background-primary hover:bg-background-tertiary z-10"
+                                                            className="absolute right-0 px-2.5 py-2 top-1/2 -translate-y-1/2 w-fit h-fit opacity-0  rounded-full group-hover:opacity-100 group-hover:bg-background-primary hover:bg-background-tertiary z-10"
                                                             onClick={(e) => {
                                                                 e.stopPropagation();
                                                                 setConversationToDelete(

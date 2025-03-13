@@ -1,5 +1,6 @@
-import backgroundImageDark from '@/assets/dunes-create-dark.png';
-import backgroundImageLight from '@/assets/dunes-create-light.png';
+// import backgroundImageDark from '@/assets/dunes-create-dark.png';
+// import backgroundImageLight from '@/assets/dunes-create-light.png';
+import backgroundImg from '@/assets/background.jpg';
 import { useProjectsManager } from '@/components/Context';
 import { useTheme } from '@/components/ThemeProvider';
 import { sendAnalytics } from '@/lib/utils';
@@ -55,20 +56,20 @@ const CreateProject = ({
     const { ref, height } = useResizeObserver();
     const { theme } = useTheme();
 
-    const [backgroundImage, setBackgroundImage] = useState(backgroundImageLight);
+    const [backgroundImage, setBackgroundImage] = useState(backgroundImg);
 
     useEffect(() => {
         const determineBackgroundImage = () => {
-            if (theme === Theme.Dark) {
-                return backgroundImageDark;
-            } else if (theme === Theme.Light) {
-                return backgroundImageLight;
-            } else if (theme === Theme.System) {
-                return window.matchMedia('(prefers-color-scheme: dark)').matches
-                    ? backgroundImageDark
-                    : backgroundImageLight;
-            }
-            return backgroundImageLight;
+            // if (theme === Theme.Dark) {
+            //     return backgroundImageDark;
+            // } else if (theme === Theme.Light) {
+            //     return backgroundImageLight;
+            // } else if (theme === Theme.System) {
+            //     return window.matchMedia('(prefers-color-scheme: dark)').matches
+            //         ? backgroundImageDark
+            //         : backgroundImageLight;
+            // }
+            return backgroundImg;
         };
 
         setBackgroundImage(determineBackgroundImage());
@@ -191,14 +192,14 @@ const CreateProject = ({
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="absolute inset-0 bg-background/50" />
+                {/* <div className="absolute inset-0 bg-background/50" /> */}
                 <div className="relative z-10">
                     <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0 }}>
                         <MotionCard
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ height, opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
-                            className="w-[30rem] min-h-[12rem] backdrop-blur-md bg-background/30 overflow-hidden p-0"
+                            className="w-[30rem] min-h-[12rem] backdrop-blur-md bg-background/30 overflow-hidden p-0 rounded-3xl"
                         >
                             <motion.div ref={ref} layout="position" className="flex flex-col">
                                 <AnimatePresence

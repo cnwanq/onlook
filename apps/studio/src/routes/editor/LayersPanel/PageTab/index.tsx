@@ -162,7 +162,8 @@ const PagesTab = observer(() => {
         >
             <div className="flex flex-row justify-between items-center gap-2 m-0">
                 <div className="relative flex-grow">
-                    <Input
+                    <span className="text-lg font-timesNewerRoma-Italic">Pages</span>
+                    {/* <Input
                         ref={inputRef}
                         className="h-8 text-xs pr-8"
                         placeholder="Search pages"
@@ -177,14 +178,14 @@ const PagesTab = observer(() => {
                         >
                             <Icons.CrossS className="h-3 w-3 text-foreground-primary/50 group-hover:text-foreground-primary" />
                         </button>
-                    )}
+                    )} */}
                 </div>
                 <Tooltip>
                     <TooltipTrigger>
                         <Button
                             variant={'default'}
                             size={'icon'}
-                            className="p-2 w-fit h-fit text-foreground-primary border-border-primary hover:border-border-onlook bg-background-secondary hover:bg-background-onlook border"
+                            className="p-2 w-fit h-fit text-black bg-transparent  hover:bg-background-onlook border-none shadow-none rounded-full"
                             onClick={() => setShowCreateModal(true)}
                         >
                             <Icons.Plus />

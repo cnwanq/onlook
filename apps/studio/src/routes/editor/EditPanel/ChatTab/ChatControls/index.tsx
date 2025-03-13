@@ -49,7 +49,7 @@ const ChatControls = observer(() => {
                     <Button
                         variant={'ghost'}
                         size={'icon'}
-                        className="p-2 w-fit h-fit hover:bg-background-onlook"
+                        className="p-2 w-fit h-fit hover:bg-background-onlook rounded-full"
                         onClick={handleNewChat}
                         disabled={editorEngine.chat.isWaiting}
                     >

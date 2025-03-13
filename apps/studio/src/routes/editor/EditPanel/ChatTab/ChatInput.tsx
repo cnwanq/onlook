@@ -259,7 +259,7 @@ export const ChatInput = observer(() => {
                 }}
             />
 
-            <div className="flex flex-col w-full p-4">
+            <div className="flex flex-col w-full pt-2 pl-2 pr-2">
                 <div
                     className={cn(
                         'flex flex-row flex-wrap w-full gap-1.5 text-micro mb-1 text-foreground-secondary',
@@ -305,6 +305,7 @@ export const ChatInput = observer(() => {
                         'selection:bg-[#3C3C3C]/30 selection:text-[#3C3C3C] text-foreground-primary',
                         'placeholder:text-foreground-primary/50',
                         'cursor-text',
+                        'mt-2',
                         isDragging ? 'pointer-events-none' : 'pointer-events-auto',
                     )}
                     rows={3}
@@ -373,13 +374,13 @@ export const ChatInput = observer(() => {
                             <Button
                                 variant={'ghost'}
                                 size={'icon'}
-                                className="w-9 h-9 text-foreground-tertiary group hover:bg-transparent"
+                                className="w-9 h-9 text-foreground-tertiary group hover:bg-foreground-tertiary/10 rounded-full"
                                 onClick={handleOpenFileDialog}
                                 disabled={disabled}
                             >
                                 <Icons.Image
                                     className={cn(
-                                        'w-5 h-5',
+                                        'w-4 h-4',
                                         disabled
                                             ? 'text-foreground-tertiary'
                                             : 'group-hover:text-foreground',
@@ -436,7 +437,7 @@ export const ChatInput = observer(() => {
                             <Button
                                 size={'icon'}
                                 variant={'secondary'}
-                                className="text-smallPlus w-fit h-full py-0.5 px-2.5 text-primary"
+                                className="text-smallPlus w-8 h-8 py-0.5 px-2.5 text-primary rounded-full"
                                 onClick={() => {
                                     setActionTooltipOpen(false);
                                     editorEngine.chat.stopStream();
@@ -451,7 +452,11 @@ export const ChatInput = observer(() => {
                     <Button
                         size={'icon'}
                         variant={'secondary'}
-                        className="text-smallPlus w-fit h-full py-0.5 px-2.5 rounded-full text-primary"
+                        className={cn(
+                            'text-smallPlus w-8 h-8 py-0.5 px-2.5 rounded-full ',
+                            inputEmpty ? 'bg-[#F5F5F5]' : 'bg-black text-white',
+                            'hover:bg-black/60 hover:text-white',
+                        )}
                         disabled={inputEmpty || editorEngine.chat.isWaiting}
                         onClick={sendMessage}
                     >

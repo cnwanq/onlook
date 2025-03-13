@@ -51,8 +51,9 @@ export function CollapsibleCodeBlock({
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
             <div
                 className={cn(
-                    'border rounded-lg bg-background-primary relative',
+                    'border rounded-lg relative',
                     !isOpen && 'group-hover:bg-background-secondary',
+                    'bg-[#F5F5F5]',
                 )}
             >
                 <div
@@ -94,7 +95,7 @@ export function CollapsibleCodeBlock({
                                     }}
                                     size="sm"
                                     variant="ghost"
-                                    className="h-7 px-3 text-foreground-secondary hover:text-foreground font-sans select-none"
+                                    className="h-7 px-2 text-foreground-secondary hover:text-foreground font-sans select-none"
                                 >
                                     <Icons.Return className="h-4 w-4 mr-2" />
                                     Revert
@@ -103,7 +104,7 @@ export function CollapsibleCodeBlock({
                                 <Button
                                     size="sm"
                                     variant="ghost"
-                                    className="h-7 px-3 dark:text-teal-200 dark:bg-teal-900/80 dark:border-teal-600 text-teal-700 bg-teal-50 border-teal-300 border-[0.5px] dark:hover:border-teal-400 dark:hover:text-teal-100 dark:hover:bg-teal-700 hover:bg-teal-100 hover:border-teal-400 hover:text-teal-800 transition-all font-sans select-none"
+                                    className="h-7 px-2 dark:text-teal-200 dark:bg-teal-900/80 dark:border-teal-600 text-black/65 bg-white border-[#D9D9D9] border-[0.5px] dark:hover:border-teal-400 dark:hover:text-teal-100 dark:hover:bg-teal-700 hover:bg-black/15 hover:border-[#D9D9D9] hover:text-black/65 transition-all font-sans select-none"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         onApply();
