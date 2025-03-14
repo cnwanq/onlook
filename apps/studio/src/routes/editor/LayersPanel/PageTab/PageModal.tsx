@@ -148,6 +148,7 @@ export function PageModal({
                 <DialogFooter>
                     <Button
                         variant="ghost"
+                        className="rounded-full"
                         onClick={() => onOpenChange(false)}
                         disabled={isLoading}
                     >
@@ -156,6 +157,7 @@ export function PageModal({
                     <Button
                         variant="outline"
                         onClick={handleSubmit}
+                        className="rounded-full"
                         disabled={isLoading || !!warning || !pageName}
                     >
                         {isLoading ? <>{loadingText}</> : buttonText}
