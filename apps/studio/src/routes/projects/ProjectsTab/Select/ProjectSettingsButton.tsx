@@ -127,12 +127,16 @@ export default function ProjectSettingsButton({ project }: { project: Project })
                         <Label htmlFor="deleteFolder">Also move folder to trash</Label>
                     </div>
                     <AlertDialogFooter>
-                        <Button variant={'ghost'} onClick={() => setShowDeleteDialog(false)}>
+                        <Button
+                            variant={'ghost'}
+                            className="rounded-full"
+                            onClick={() => setShowDeleteDialog(false)}
+                        >
                             Cancel
                         </Button>
                         <Button
-                            variant={'destructive'}
-                            className="rounded-md text-sm"
+                            // variant={'ghost'}
+                            className="rounded-full text-sm bg-black text-white"
                             onClick={handleDeleteProject}
                         >
                             Delete
@@ -164,12 +168,16 @@ export default function ProjectSettingsButton({ project }: { project: Project })
                         </p>
                     </div>
                     <AlertDialogFooter>
-                        <Button variant={'ghost'} onClick={() => setShowRenameDialog(false)}>
+                        <Button
+                            variant={'ghost'}
+                            className="rounded-full"
+                            onClick={() => setShowRenameDialog(false)}
+                        >
                             Cancel
                         </Button>
                         <Button
                             disabled={isProjectNameEmpty}
-                            className="rounded-md text-sm"
+                            className="rounded-full text-sm"
                             onClick={handleRenameProject}
                         >
                             Rename

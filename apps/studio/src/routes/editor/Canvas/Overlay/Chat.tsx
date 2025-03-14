@@ -134,7 +134,7 @@ export const OverlayChat = observer(
                 <div
                     className={cn(
                         'backdrop-blur-lg transition-all duration-300',
-                        'shadow shadow-background-secondary/50',
+                        'shadow',
                         // inputState.isVisible
                         //     ? 'bg-white/80 border shadow-xl shadow-background-secondary/50 p-1'
                         //     : 'bg-white/85 dark:bg-background/85 border-foreground-secondary/20 hover:border-foreground-secondary/50 p-0.5',
@@ -146,11 +146,11 @@ export const OverlayChat = observer(
                         // Chat Button
                         <button
                             onClick={() => setInputState((prev) => ({ ...prev, isVisible: true }))}
-                            className="hover:text-foreground-primary transition-colors px-2.5 py-1.5 flex flex-row items-center gap-2 w-full shadow rounded-full h-12"
+                            className="hover:text-foreground-primary transition-colors px-2.5 py-1.5 flex flex-row items-center gap-2 w-full shadow-2xl rounded-full h-12"
                             // style={{ height: '48px'}}
                         >
                             <Icons.Sparkles className="w-4 h-4" />
-                            <span className="text-xl text-black/45 font-normal whitespace-nowrap mr-14">
+                            <span className="text-base text-black/45 font-normal whitespace-nowrap mr-14">
                                 Chat with AI...
                             </span>
                             <Button
@@ -168,7 +168,7 @@ export const OverlayChat = observer(
                         </button>
                     ) : (
                         // Input Field
-                        <div className="flex flex-row items-top gap-1 w-full min-w-[360px] relative bg-white rounded-shadow min-h-12 items-center">
+                        <div className="flex flex-row items-top gap-1 w-full min-w-[360px] relative bg-white min-h-12 items-center border shadow-2xl rounded-3xl">
                             <Button
                                 size="icon"
                                 onClick={() =>
@@ -179,12 +179,12 @@ export const OverlayChat = observer(
                                     }))
                                 }
                                 className={cn(
-                                    'group h-6 w-6 absolute left-2 top-3 z-10 border-none shadow-none hover:bg-transparent rounded-full ',
+                                    'group h-6 w-6 absolute left-2 top-3 z-10 border-none shadow-none hover:bg-transparent bg-transparent',
                                     'transition-all duration-200',
                                     // inputState.value.trim().length >= DIMENSIONS.minCharsToSubmit
                                     //     ? 'opacity-0 -translate-x-2 scale-75 pointer-events-none'
                                     //     : 'opacity-100 translate-x-0 scale-100 pointer-events-auto',
-                                    'text-black bg-white',
+                                    'text-black',
                                 )}
                                 disabled={inputState.isSubmitting}
                             >
@@ -195,18 +195,19 @@ export const OverlayChat = observer(
                                 aria-label="Chat message input"
                                 ref={textareaRef}
                                 className={cn(
-                                    'w-full text-xs break-words focus-visible:ring-0 resize-none shadow border-[0.5px]',
+                                    'w-full text-xs break-words focus-visible:ring-0 resize-none shadow-none boder-0',
                                     'transition-all duration-150 ease-in-out',
                                     'backdrop-blur-lg',
                                     // inputState.value.trim().length >= DIMENSIONS.minCharsToSubmit
                                     //     ? 'pl-2'
                                     //     : 'pl-8',
                                     'pl-8 pr-10',
-                                    'text-foreground-primary border-background-secondary/75',
+                                    'text-foreground-primary',
                                     'max-h-[120px] caret-[#3C3C3C]',
                                     'selection:bg-[#3C3C3C]/30 selection:text-[#3C3C3C]',
                                     'rounded-3xl',
-                                    'text-xl bg-transparent',
+                                    'text-base bg-transparent',
+                                    'border-transparent',
                                 )}
                                 value={inputState.value}
                                 onChange={(e) => {
@@ -274,14 +275,14 @@ export const OverlayChat = observer(
                                 className={cn(
                                     'absolute right-1 bottom-2 h-8 w-8',
                                     'bg-foreground-primary text-white hover:bg-foreground-hover rounded-full',
-                                    'disabled:bg-[#F5F5F5]',
+                                    'disabled:bg-[#F5F5F5] disabled:text-black/15',
                                 )}
                                 disabled={
                                     inputState.value.trim().length < DIMENSIONS.minCharsToSubmit ||
                                     inputState.isSubmitting
                                 }
                             >
-                                <Icons.ArrowUp className="h-4 w-4 text-background" />
+                                <Icons.ArrowUp className="h-4 w-4" />
                             </Button>
                         </div>
                     )}

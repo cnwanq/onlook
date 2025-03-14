@@ -139,13 +139,14 @@ export const PromptCreation = observer(({ initialScreen = false }: { initialScre
                             <Button
                                 variant="secondary"
                                 className={cn(
-                                    'w-fit h-fit flex flex-col gap-1 text-foreground-secondary hover:text-foreground-active backdrop-blur-md bg-background/30',
+                                    'w-10 h-10 flex flex-col gap-1 text-foreground-secondary hover:text-foreground-active backdrop-blur-md bg-background/30',
                                     projectsManager.create.state !== CreateState.PROMPT && 'hidden',
+                                    'rounded-full shadow',
                                 )}
                                 onClick={returnToProjects}
                             >
                                 <Icons.CrossL className="w-4 h-4 cursor-pointer" />
-                                <p className="text-microPlus">Close</p>
+                                {/* <p className="text-microPlus">Close</p> */}
                             </Button>
                         )}
                     </div>

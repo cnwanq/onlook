@@ -179,7 +179,16 @@ export const PromptingCard = () => {
 
     return (
         <MotionConfig transition={{ duration: 0.5, type: 'spring', bounce: 0 }}>
-            <div className="flex flex-col gap-4 mb-12">
+            <div className="flex flex-col items-center gap-4 mb-12">
+                <div className="flex flex-col gap-4 items-center">
+                    <h2 className="text-5xl text-foreground-primary text-center font-timesNewerRoma-BoldItalic">
+                        All-in-One Website Creation Platform
+                    </h2>
+                    <span className="text-center font-timesNewerRoma-Italic text-2xl w-[630px] text-[#1E1E1E]">
+                        From design to launch, we provide comprehensive support to get your website
+                        online effortlessly.
+                    </span>
+                </div>
                 <MotionCard
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ height: diffHeight, opacity: 1, y: 0 }}
@@ -187,29 +196,13 @@ export const PromptingCard = () => {
                     className={cn('w-[680px] overflow-hidden', isDragging && 'bg-background')}
                 >
                     <motion.div ref={diffRef} layout="position" className="flex flex-col">
-                        <CardHeader>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="text-4xl text-foreground-primary text-center font-timesNewerRoma-BoldItalic"
-                            >
-                                All-in-One Website Creation Platform
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 }}
-                                className="text-sm text-foreground-secondary text-center text-stone font-timesNewerRoma-Italic"
-                            >
-                                From design to launch, we provide comprehensive support to get your
-                                website online effortlessly.
-                            </motion.p>
-                        </CardHeader>
+                        {/* <CardHeader>
+                        </CardHeader> */}
                         <CardContent>
                             <div
                                 className={cn(
-                                    'flex flex-col gap-3 rounded-3xl p-0 transition-colors duration-200 cursor-text',
-                                    'bg-white/60 backdrop-blur-md',
+                                    'flex flex-col gap-3 rounded-3xl p-0 mt-1 transition-colors duration-200 cursor-text',
+                                    'bg-white/80 backdrop-blur border-white',
                                     '[&[data-dragging-image=true]]:bg-teal-500/40',
                                     isDragging && 'bg-teal-500/40 cursor-copy',
                                 )}
@@ -291,7 +284,7 @@ export const PromptingCard = () => {
                                         style={{ resize: 'none' }}
                                     />
                                 </div>
-                                <div className="flex flex-row w-full justify-between pt-0 pb-1 px-2">
+                                <div className="flex flex-row w-full justify-between pt-0 pb-2 px-2">
                                     <div className="flex flex-row justify-start gap-1.5">
                                         <Tooltip
                                             open={imageTooltipOpen && !isHandlingFile}
@@ -303,7 +296,7 @@ export const PromptingCard = () => {
                                                 <Button
                                                     variant="ghost"
                                                     size="icon"
-                                                    className="w-9 h-9 text-foreground-tertiary group hover:bg-transparent"
+                                                    className="w-8 h-8 text-foreground-tertiary group hover:bg-transparent"
                                                     onClick={() =>
                                                         document
                                                             .getElementById('image-input')
@@ -347,7 +340,7 @@ export const PromptingCard = () => {
                                                 size="icon"
                                                 variant="secondary"
                                                 className={cn(
-                                                    'text-smallPlus w-fit h-full py-2 px-2 rounded-full',
+                                                    'text-smallPlus w-8 h-8 py-2 px-2 rounded-full',
                                                     isInputInvalid
                                                         ? 'text-primary'
                                                         : 'bg-foreground-primary text-white hover:bg-foreground-hover',
@@ -378,10 +371,10 @@ export const PromptingCard = () => {
                 </MotionCard>
                 <Button
                     variant="outline"
-                    className="w-fit mx-auto bg-background-secondary/90 text-sm border text-foreground-secondary rounded-full"
+                    className="w-fit mx-auto bg-background-secondary/90 text-sm  text-foreground-secondary rounded-full hover:border-none border-none shadow"
                     onClick={handleBlankSubmit}
                 >
-                    <Icons.File className="w-4 h-4 mr-2" /> Start from a blank page
+                    <Icons.Plus className="w-4 h-4 mr-2" /> Start from a blank page
                 </Button>
             </div>
         </MotionConfig>

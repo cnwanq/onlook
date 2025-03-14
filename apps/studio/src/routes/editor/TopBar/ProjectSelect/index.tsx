@@ -121,10 +121,11 @@ const ProjectBreadcrumb = observer(() => {
                             <DropdownMenuItem
                                 onClick={() => handleNavigateToProject(ProjectTabs.PROMPT_CREATE)}
                                 className={cn(
-                                    'focus:bg-blue-100 focus:text-blue-900',
-                                    'hover:bg-blue-100 hover:text-blue-900',
-                                    'dark:focus:bg-blue-900 dark:focus:text-blue-100',
-                                    'dark:hover:bg-blue-900 dark:hover:text-blue-100',
+                                    'focus:bg-background-secondary hover:bg-background-secondary',
+                                    // 'focus:bg-blue-100 focus:text-blue-900',
+                                    // 'hover:bg-blue-100 hover:text-blue-900',
+                                    // 'dark:focus:bg-blue-900 dark:focus:text-blue-100',
+                                    // 'dark:hover:bg-blue-900 dark:hover:text-blue-100',
                                 )}
                             >
                                 <Icons.FilePlus className="mr-2 h-4 w-4" />
@@ -133,10 +134,11 @@ const ProjectBreadcrumb = observer(() => {
                             <DropdownMenuItem
                                 onClick={() => handleNavigateToProject(ProjectTabs.IMPORT_PROJECT)}
                                 className={cn(
-                                    'focus:bg-teal-100 focus:text-teal-900',
-                                    'hover:bg-teal-100 hover:text-teal-900',
-                                    'dark:focus:bg-teal-900 dark:focus:text-teal-100',
-                                    'dark:hover:bg-teal-900 dark:hover:text-teal-100',
+                                    'focus:bg-background-secondary hover:bg-background-secondary',
+                                    // 'focus:bg-teal-100 focus:text-teal-900',
+                                    // 'hover:bg-teal-100 hover:text-teal-900',
+                                    // 'dark:focus:bg-teal-900 dark:focus:text-teal-100',
+                                    // 'dark:hover:bg-teal-900 dark:hover:text-teal-100',
                                 )}
                             >
                                 <Icons.Download className="mr-2 h-4 w-4" />
