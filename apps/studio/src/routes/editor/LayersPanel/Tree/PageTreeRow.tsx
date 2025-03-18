@@ -19,9 +19,9 @@ const PageTreeRow = forwardRef<
                     'hover:text-foreground-primary hover:bg-background-onlook',
                 ],
                 attrs['aria-selected'] && [
-                    '!bg-[#FA003C] dark:!bg-[#FA003C]',
+                    '!bg-[#007AFF] dark:!bg-[#007AFF]',
                     '!text-primary dark:!text-primary',
-                    '![&]:hover:bg-[#FA003C] dark:[&]:hover:bg-[#FA003C]',
+                    '![&]:hover:bg-[#007AFF] dark:[&]:hover:bg-[#007AFF]',
                 ],
             )}
         >

@@ -61,15 +61,15 @@ const ChatHistory = observer(({ isOpen, onOpenChange }: ChatHistoryProps) => {
                 </Button>
             </PopoverTrigger>
             <PopoverAnchor className="absolute -left-2 top-0" />
-            <PopoverContent side="left" align="start" className="rounded-xl p-0">
+            <PopoverContent side="left" align="start" className="rounded-2xl p-0">
                 <div className="flex flex-col select-none">
                     <div className="border-b">
                         <div className="flex flex-row justify-between items-center p-1 h-fit text-xs text-foreground-tertiary">
-                            <span className="px-2">Chat History</span>
+                            <span className="px-2 h-4">Chat History</span>
                             <Button
                                 variant={'ghost'}
                                 size={'icon'}
-                                className="p-2 w-fit hover:bg-transparent"
+                                className="w-8 h-8 hover:bg-[#EEEEEE] rounded-full"
                                 onClick={() => onOpenChange(false)}
                             >
                                 <Icons.CrossL />
@@ -85,11 +85,11 @@ const ChatHistory = observer(({ isOpen, onOpenChange }: ChatHistoryProps) => {
                                         {sortedConversations.map((conversation) => (
                                             <button
                                                 className={cn(
-                                                    'flex flex-row w-full py-2 items-center rounded-full hover:bg-background-onlook cursor-pointer select-none group relative',
+                                                    'flex flex-row w-full py-2 items-center rounded-xl hover:bg-[#EEEEEE] cursor-pointer select-none group relative',
                                                     conversation.id ===
                                                         editorEngine.chat.conversation.current
                                                             ?.id &&
-                                                        'bg-background-onlook text-primary font-semibold',
+                                                        'bg-[#EEEEEE] text-primary font-semibold',
                                                 )}
                                                 key={conversation.id}
                                                 onClick={() =>

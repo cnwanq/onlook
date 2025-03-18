@@ -47,10 +47,11 @@ export const TopBar = observer(() => {
                             New Project
                         </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent>
+                    <DropdownMenuContent className="rounded-2xl">
                         <DropdownMenuItem
                             className={cn(
                                 'focus:bg-background-secondary hover:bg-background-secondary',
+                                'rounded-xl',
                                 // 'focus:bg- focus:text-blue-900',
                                 // 'hover:bg-blue-100 hover:text-blue-900',
                                 // 'dark:focus:bg-blue-900 dark:focus:text-blue-100',
@@ -64,6 +65,7 @@ export const TopBar = observer(() => {
                         <DropdownMenuItem
                             className={cn(
                                 'focus:bg-background-secondary hover:bg-background-secondary',
+                                'rounded-xl',
                                 // 'focus:bg-teal-100 focus:text-teal-900',
                                 // 'hover:bg-teal-100 hover:text-teal-900',
                                 // 'dark:focus:bg-teal-900 dark:focus:text-teal-100',

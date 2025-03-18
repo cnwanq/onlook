@@ -96,7 +96,7 @@ const ProjectBreadcrumb = observer(() => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                     align="start"
-                    className="w-48"
+                    className="w-48 rounded-2xl"
                     onMouseEnter={() => {
                         if (closeTimeoutRef.current) {
                             clearTimeout(closeTimeoutRef.current);
@@ -108,7 +108,7 @@ const ProjectBreadcrumb = observer(() => {
                         }, 300);
                     }}
                 >
-                    <DropdownMenuItem onClick={handleReturn}>
+                    <DropdownMenuItem onClick={handleReturn} className="rounded-xl">
                         <div className="flex row center items-center group">
                             <Icons.Tokens className="mr-2 group-hover:rotate-12 transition-transform" />
                             {'Go to all Projects'}
@@ -116,12 +116,15 @@ const ProjectBreadcrumb = observer(() => {
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuSub>
-                        <DropdownMenuSubTrigger>New Project</DropdownMenuSubTrigger>
-                        <DropdownMenuSubContent>
+                        <DropdownMenuSubTrigger className="rounded-xl">
+                            New Project
+                        </DropdownMenuSubTrigger>
+                        <DropdownMenuSubContent className="rounded-2xl">
                             <DropdownMenuItem
                                 onClick={() => handleNavigateToProject(ProjectTabs.PROMPT_CREATE)}
                                 className={cn(
                                     'focus:bg-background-secondary hover:bg-background-secondary',
+                                    'rounded-xl',
                                     // 'focus:bg-blue-100 focus:text-blue-900',
                                     // 'hover:bg-blue-100 hover:text-blue-900',
                                     // 'dark:focus:bg-blue-900 dark:focus:text-blue-100',
@@ -135,6 +138,7 @@ const ProjectBreadcrumb = observer(() => {
                                 onClick={() => handleNavigateToProject(ProjectTabs.IMPORT_PROJECT)}
                                 className={cn(
                                     'focus:bg-background-secondary hover:bg-background-secondary',
+                                    'rounded-xl',
                                     // 'focus:bg-teal-100 focus:text-teal-900',
                                     // 'hover:bg-teal-100 hover:text-teal-900',
                                     // 'dark:focus:bg-teal-900 dark:focus:text-teal-100',
@@ -147,7 +151,7 @@ const ProjectBreadcrumb = observer(() => {
                         </DropdownMenuSubContent>
                     </DropdownMenuSub>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleOpenProjectFolder}>
+                    <DropdownMenuItem onClick={handleOpenProjectFolder} className="rounded-xl">
                         {'Show in Explorer'}
                     </DropdownMenuItem>
                     {/* <DropdownMenuItem

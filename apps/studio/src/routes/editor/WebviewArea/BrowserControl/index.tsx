@@ -202,7 +202,8 @@ const BrowserControls = observer(
                 return 'text-blue-400 fill-blue-400';
             }
             if (domState === WebviewState.DOM_ONLOOK_ENABLED) {
-                return 'text-teal-400 fill-teal-400';
+                // return 'text-teal-400 fill-teal-400';
+                return 'text-blue-400 fill-blue-400';
             }
             if (domState === WebviewState.DOM_NO_ONLOOK) {
                 return 'text-amber-400 fill-amber-400';
@@ -373,7 +374,7 @@ const BrowserControls = observer(
                                 size={'icon'}
                                 variant={'ghost'}
                             >
-                                <Icons.ChevronDown className="text-inherit h-4 w-4 rotate-0 group-data-[state=open]:-rotate-180 duration-200 ease-in-out" />
+                                <Icons.ChevronDown className="text-black h-4 w-4 rotate-0 group-data-[state=open]:-rotate-180 duration-200 ease-in-out" />
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="rounded-3xl bg-background">

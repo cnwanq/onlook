@@ -84,9 +84,9 @@ const EditPanel = observer(() => {
                                     </TabsTrigger>
                                 </div>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent className="min-w-[220px]">
+                            <DropdownMenuContent className="min-w-[220px] p-2 rounded-2xl">
                                 <DropdownMenuItem
-                                    className="flex items-center py-1.5"
+                                    className="flex items-center py-1.5 rounded-xl"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         userManager.settings.updateChat({
@@ -105,7 +105,7 @@ const EditPanel = observer(() => {
                                     Show suggestions
                                 </DropdownMenuItem>
                                 <DropdownMenuItem
-                                    className="flex items-center py-1.5"
+                                    className="flex items-center py-1.5 rounded-xl"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         userManager.settings.updateChat({
@@ -124,7 +124,7 @@ const EditPanel = observer(() => {
                                     Auto-apply results
                                 </DropdownMenuItem>
                                 <DropdownMenuItem
-                                    className="flex items-center py-1.5"
+                                    className="flex items-center py-1.5 rounded-xl"
                                     onClick={(e) => {
                                         e.preventDefault();
                                         userManager.settings.updateChat({

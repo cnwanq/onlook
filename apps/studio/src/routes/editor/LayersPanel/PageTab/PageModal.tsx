@@ -155,9 +155,9 @@ export function PageModal({
                         Cancel
                     </Button>
                     <Button
-                        variant="outline"
+                        // variant="outline"
                         onClick={handleSubmit}
-                        className="rounded-full"
+                        className="rounded-full bg-[#1E1E1E]"
                         disabled={isLoading || !!warning || !pageName}
                     >
                         {isLoading ? <>{loadingText}</> : buttonText}

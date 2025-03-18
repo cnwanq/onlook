@@ -315,7 +315,8 @@ const Frame = observer(
                 return 'outline-blue-400';
             }
             if (domState === WebviewState.DOM_ONLOOK_ENABLED) {
-                return 'outline-teal-400';
+                // return 'outline-teal-400';
+                return 'outline-blue-400';
             }
             if (domState === WebviewState.DOM_NO_ONLOOK) {
                 return 'outline-amber-400';
