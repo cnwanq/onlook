@@ -86,14 +86,17 @@ export function PageModal({
                 toast({
                     title: 'Page created',
                     description: 'Page has been successfully created.',
-                    variant: 'default',
+                    // variant: 'default',
+                    className: 'bg-black text-white',
                 });
             } else {
                 await editorEngine.pages.renamePage(baseRoute, pageName);
                 toast({
                     title: 'Page renamed',
                     description: 'Page has been successfully renamed.',
-                    variant: 'default',
+                    // variant: 'default',
+                    // className: 'bg-black text-white',
+                    className: 'bg-black text-white',
                 });
             }
 

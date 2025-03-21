@@ -82,9 +82,10 @@ export const PricingModal = observer(() => {
                 | undefined = await invokeMainChannel(MainChannels.CREATE_STRIPE_CHECKOUT);
             if (res?.success) {
                 toast({
-                    variant: 'default',
+                    // variant: 'default',
                     title: t('pricing.toasts.checkingOut.title'),
                     description: t('pricing.toasts.checkingOut.description'),
+                    className: 'bg-black text-white',
                 });
             } else {
                 throw new Error('No checkout URL received');
@@ -92,9 +93,10 @@ export const PricingModal = observer(() => {
             setIsCheckingOut(null);
         } catch (error) {
             toast({
-                variant: 'destructive',
+                // variant: 'destructive',
                 title: t('pricing.toasts.error.title'),
                 description: t('pricing.toasts.error.description'),
+                className: 'bg-black text-white',
             });
             console.error('Payment error:', error);
             setIsCheckingOut(null);
@@ -112,9 +114,10 @@ export const PricingModal = observer(() => {
                 | undefined = await invokeMainChannel(MainChannels.MANAGE_SUBSCRIPTION);
             if (res?.success) {
                 toast({
-                    variant: 'default',
+                    // variant: 'default',
                     title: t('pricing.toasts.redirectingToStripe.title'),
                     description: t('pricing.toasts.redirectingToStripe.description'),
+                    className: 'bg-black text-white',
                 });
             }
             if (res?.error) {

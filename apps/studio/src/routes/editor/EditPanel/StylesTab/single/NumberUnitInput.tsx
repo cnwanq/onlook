@@ -53,7 +53,8 @@ const NumberUnitInput = observer(
                 toast({
                     title: `Invalid Input`,
                     description: `Value for ${elementStyle.displayName} cannot be less than ${min}`,
-                    variant: 'destructive',
+                    // variant: 'destructive',
+                    className: 'bg-black text-white',
                 });
                 return;
             }
@@ -62,7 +63,8 @@ const NumberUnitInput = observer(
                 toast({
                     title: `Invalid Input`,
                     description: `Value for ${elementStyle.displayName} cannot be more than ${max}`,
-                    variant: 'destructive',
+                    // variant: 'destructive',
+                    className: 'bg-black text-white',
                 });
                 return;
             }

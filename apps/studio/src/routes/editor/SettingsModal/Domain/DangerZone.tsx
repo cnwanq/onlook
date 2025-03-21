@@ -21,12 +21,14 @@ const DangerZone = observer(() => {
             toast({
                 title: 'Failed to unpublish project',
                 description: 'Please try again.',
-                variant: 'destructive',
+                // variant: 'destructive',
+                className: 'bg-black text-white',
             });
         } else {
             toast({
                 title: 'Project unpublished',
                 description: 'Your project is no longer publicly accessible.',
+                className: 'bg-black text-white',
             });
         }
     };
@@ -43,9 +45,9 @@ const DangerZone = observer(() => {
                     </p>
                     <Button
                         onClick={unpublishProject}
-                        className="ml-auto"
+                        className="ml-auto bg-black text-white"
                         size="sm"
-                        variant="destructive"
+                        // variant="destructive"
                         disabled={isUnpublishing || !baseDomain}
                     >
                         {isUnpublishing ? 'Unpublishing...' : 'Unpublish'}

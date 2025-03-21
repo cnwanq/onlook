@@ -30,7 +30,7 @@ export class TextEditingManager {
                         ? "Can't determine if text is editable"
                         : "Can't edit text because it's not plain text. Edit in code or use AI.",
                 // variant: 'destructive',
-                className: 'bg-black',
+                className: 'bg-black text-white',
             });
             return;
         }

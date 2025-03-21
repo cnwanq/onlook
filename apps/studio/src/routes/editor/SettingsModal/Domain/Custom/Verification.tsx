@@ -147,6 +147,7 @@ export const Verification = observer(() => {
         toast({
             title: 'Domain verified!',
             description: 'Your domain is verified and ready to publish.',
+            className: 'bg-black text-white',
         });
         setTimeout(() => {
             editorEngine.isSettingsOpen = false;

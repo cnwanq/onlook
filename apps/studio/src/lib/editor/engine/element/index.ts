@@ -149,7 +149,8 @@ export class ElementManager {
                 toast({
                     title: 'Cannot delete element',
                     description: error,
-                    variant: 'destructive',
+                    // variant: 'destructive',
+                    className: 'bg-black text-white',
                 });
                 return;
             }
@@ -162,7 +163,8 @@ export class ElementManager {
                 toast({
                     title: 'Cannot delete element',
                     description: 'Remove action not found. Try refreshing the page.',
-                    variant: 'destructive',
+                    // variant: 'destructive',
+                    className: 'bg-black text-white',
                 });
                 return;
             }
@@ -172,7 +174,8 @@ export class ElementManager {
                 toast({
                     title: 'Cannot delete element',
                     description: 'Code block not found. Try refreshing the page.',
-                    variant: 'destructive',
+                    // variant: 'destructive',
+                    className: 'bg-black text-white',
                 });
                 return;
             }

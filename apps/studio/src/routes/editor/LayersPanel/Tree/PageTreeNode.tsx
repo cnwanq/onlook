@@ -68,7 +68,8 @@ const PageTreeNode: React.FC<PageTreeNodeProps> = ({ node, style }) => {
             toast({
                 title: 'Failed to delete page',
                 description: error instanceof Error ? error.message : String(error),
-                variant: 'destructive',
+                // variant: 'destructive',
+                className: 'bg-black text-white',
             });
         }
     };
@@ -80,14 +81,16 @@ const PageTreeNode: React.FC<PageTreeNodeProps> = ({ node, style }) => {
             toast({
                 title: 'Page duplicated',
                 description: 'Page has been successfully duplicated.',
-                variant: 'default',
+                // variant: 'default',
+                className: 'bg-black text-white',
             });
         } catch (error) {
             console.error('Failed to duplicate page:', error);
             toast({
                 title: 'Failed to duplicate page',
                 description: error instanceof Error ? error.message : String(error),
-                variant: 'destructive',
+                // variant: 'destructive',
+                className: 'bg-black text-white',
             });
         }
     };
@@ -116,7 +119,7 @@ const PageTreeNode: React.FC<PageTreeNodeProps> = ({ node, style }) => {
             label: 'Delete',
             action: handleDelete,
             icon: <Icons.Trash className="mr-2 h-4 w-4" />,
-            destructive: true,
+            destructive: false,
             disabled: node.data.isRoot,
         },
     ];

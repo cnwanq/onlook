@@ -55,7 +55,8 @@ const AutoLayoutInput = observer(({ elementStyle }: { elementStyle: SingleStyle 
             toast({
                 title: 'Invalid Input',
                 description: `Value for ${elementStyle.displayName} cannot be less than ${min}`,
-                variant: 'destructive',
+                // variant: 'destructive',
+                className: 'bg-black text-white',
             });
             return;
         }
@@ -64,7 +65,8 @@ const AutoLayoutInput = observer(({ elementStyle }: { elementStyle: SingleStyle 
             toast({
                 title: 'Invalid Input',
                 description: `Value for ${elementStyle.displayName} cannot be greater than ${max}`,
-                variant: 'destructive',
+                // variant: 'destructive',
+                className: 'bg-black text-white',
             });
             return;
         }

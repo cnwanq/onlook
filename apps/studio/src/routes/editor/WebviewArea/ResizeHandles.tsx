@@ -140,6 +140,7 @@ const ResizeHandles = observer(
                         Unlock
                     </ToastAction>
                 ),
+                className: 'bg-black text-white',
             });
         };
 

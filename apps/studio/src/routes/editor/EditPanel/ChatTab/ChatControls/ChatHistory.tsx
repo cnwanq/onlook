@@ -151,8 +151,8 @@ const ChatHistory = observer(({ isOpen, onOpenChange }: ChatHistoryProps) => {
                             Cancel
                         </Button>
                         <Button
-                            variant={'destructive'}
-                            className="rounded-md text-sm"
+                            // variant={'destructive'}
+                            className="rounded-md text-sm bg-black text-white"
                             onClick={handleDeleteConversation}
                         >
                             Delete

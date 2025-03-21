@@ -16,6 +16,7 @@ import { DraftContextPill } from './ContextPills/DraftContextPill';
 import { DraftImagePill } from './ContextPills/DraftingImagePill';
 import type { SuggestionsRef } from './Suggestions';
 import Suggestions from './Suggestions';
+import { OnlookDraftImagePill } from './ContextPills/OnlookDraftingImagePill';
 
 export const ChatInput = observer(() => {
     const editorEngine = useEditorEngine();
@@ -259,7 +260,7 @@ export const ChatInput = observer(() => {
                 }}
             />
 
-            <div className="flex flex-col w-full pt-2 pl-2 pr-2">
+            <div className="flex flex-col w-full pt-3 pl-3 pr-3">
                 <div
                     className={cn(
                         'flex flex-row flex-wrap w-full gap-1.5 text-micro mb-1 text-foreground-secondary',
@@ -271,7 +272,7 @@ export const ChatInput = observer(() => {
                             (context: ChatMessageContext, index: number) => {
                                 if (context.type === MessageContextType.IMAGE) {
                                     return (
-                                        <DraftImagePill
+                                        <OnlookDraftImagePill
                                             key={`image-${context.content}`}
                                             context={context}
                                             onRemove={() => handleRemoveContext(context)}
